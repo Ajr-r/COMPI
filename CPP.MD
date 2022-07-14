@@ -29,3 +29,55 @@ int main() {
 }
 
 ```
+# DECISION STATMENTS
+```C++
+#include<iostream>
+using namespace std;
+int main(){
+    int i =-1;
+    if(i>=1){
+        if(i>5){
+            cout<<"i is greater than 5"<<endl;
+        }
+        else{
+
+    cout<<"i is greater than 1"<<endl;
+        }
+
+    }
+    else if(i==0){
+        cout<<"i is 0";
+    }
+
+    else{
+        cout<<"in else block"<<endl;
+    }
+
+    if(true){
+        cout<<"dd"<<endl;
+    }
+
+switch (1)
+    {
+
+case 1:
+    cout<<"you chose option 1";
+    break;
+case 2:
+    cout<<"you chose option 2";
+    break;
+case 3:
+    cout<<"you chose option 3";
+    break;
+case 4:
+    cout<<"you chose option 4";
+    break;
+default:
+    cout<<"you did'nt choose any option";
+    break;
+    }
+
+}
+
+
+```
