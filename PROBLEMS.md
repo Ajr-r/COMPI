@@ -20,3 +20,37 @@ cout<<"number of years "<<year<<" number of week: "<<week<<" number of days is "
 
 
 ```
+# 2
+Write a C++ program to read an amount (integer value) and break the amount into smallest possible number of bank notes.
+
+Input:
+375
+
+
+Expected Output:
+There are:
+3 Note(s) of 100.00
+1 Note(s) of 50.00
+1 Note(s) of 20.00
+0 Note(s) of 10.00
+1 Note(s) of 5.00
+```c++
+#include<iostream>
+using namespace std;
+int main() {
+    int x=375;
+    int h=x/100;
+    int f=(x-h*100)/50;
+    int tw=(x-((h*100)+(f*50)))/20;
+    int te=(x-((h*100)+(f*50)+(tw*20)))/10;
+    int fi=(x-((h*100)+(f*50)+(tw*20)+(te*10)))/5;
+    cout<<"There are :"<<endl;
+    cout<<h<<"Note(s) of 100.00"<<endl;
+    cout<<f<<"Note(s) of 50.00"<<endl;
+    cout<<tw<<"Note(s) of 20.00"<<endl;
+    cout<<te<<"Note(s) of 10.00"<<endl;
+    cout<<fi<<"Note(s) of 5.00"<<endl;
+  
+}
+
+```
