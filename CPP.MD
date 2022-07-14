@@ -81,3 +81,24 @@ default:
 
 
 ```
+# ITERATION STATEMENTS
+```C++
+#include<iostream>
+using namespace std;
+int main(){
+    int i =0;
+    while(i<10){
+        cout<<"hi "<<i<<endl;
+        i+=1;
+    }
+    do{
+        cout<<"gg"<<endl;
+        i--;
+    }while(i>1);
+    
+    for(int g=1;g<10;g++){
+        cout<<g<<endl;
+    }
+
+}
+```
