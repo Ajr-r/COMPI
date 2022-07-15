@@ -102,3 +102,40 @@ int main(){
 
 }
 ```
+# ARRAY POINTERS AND REF
+```C++
+#include<iostream>
+using namespace std;
+
+
+int main()
+{
+
+    int art[2][2]={1,2,3,4};//2 dim array no need for brackets
+    cout<<art[1][1]<<endl;
+
+    int ar[5]={1,2,3,4,5};//1 dim array
+    for(int i=0;i<5;i++){
+        cout<<ar[i]<<" ";
+    }
+    cout<<endl;
+    int a=10;
+    int *p=&a;// '*' is used to declare a pointer and '&' is used to get address of a value
+    cout<<a<<endl;
+    cout<<p<<endl;
+    cout<<*p<<endl;// again '*' is used to print data stored in the address that the pointer holds
+    cout<<&p<<endl;//can also print the address of the pointer
+    int b=50;
+    int& g=b;//'&' after the datatype indicates a reference variable changing the value for ref var will change the value of original as well
+    g=100;
+    cout<<g<<endl;
+    cout<<b<<endl;
+
+   
+
+
+
+
+}
+
+```
