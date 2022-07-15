@@ -139,3 +139,39 @@ int main()
 }
 
 ```
+# FUNCTIONS
+```C++
+#include <iostream>
+using namespace std;
+void gg(){
+    cout<<"from function"<<endl;
+}
+int add(int x, int y){
+    return x+y;
+
+}
+int add10(int x,int y){
+    x+=10;
+    y+=10;
+}
+int add10withref(int &x,int &y){//passing refernce from actual parameters
+    x+=10;
+    y+=10;
+}
+void display(int a[]){
+    for(int i=0;i<3;i++){
+        cout<<a[i]<<" ";
+    }
+    cout<<endl;
+}
+int main(){
+    int a[3]={1,2,3};
+    display(a);
+    int x =1;
+    int y=2;
+    add10withref(x,y);
+    cout<<x<<" "<<y<<endl;
+    gg();
+    cout<<add(2,4);
+}
+```
