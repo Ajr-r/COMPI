@@ -175,3 +175,23 @@ int main(){
     cout<<add(2,4);
 }
 ```
+# STRING
+```C++
+#include<iostream>
+#include <list>
+
+
+using namespace std;
+int main(){
+    char a[50];//string is also list of char
+    cin.get(a,50);//used to get all inputs in 0ne go,but use the other one
+    for(int i=0;i<50;i++){
+        cout<<a[i]<<endl;
+    }
+    string str;
+    int a;
+    getline(cin,str);//also gets entire line use this 
+    cout<<str.size();
+}
+
+```
