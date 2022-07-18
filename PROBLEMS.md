@@ -54,3 +54,24 @@ int main() {
 }
 
 ```
+# PALINDROME/STRING REVERSAL
+```c++
+#include <iostream>
+using namespace std;
+int main(){
+  string s="1221";
+  string s1;
+  for(int i =0;i<s.size();i++){
+    s1+=s[(s.size()-1)-i];
+  }
+  if(s==s1){
+    cout<<"is a palindrome";
+  }
+  else{
+    cout<<"not a palindrome";
+  }
+  
+
+}
+
+```
