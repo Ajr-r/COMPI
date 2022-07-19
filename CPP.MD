@@ -200,7 +200,7 @@ int main(){
 #include<iostream>
 using namespace std;
 
-enum week{// used to create user defined data types
+enum week{// used to create user defined data types and defualt values start from 0 and increase for next var
     sun=1,
     mon=2,
     tue=3,
