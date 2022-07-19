@@ -195,3 +195,38 @@ int main(){
 }
 
 ```
+# ENUMERATE AND STRUCTERS
+```C++
+#include<iostream>
+using namespace std;
+
+enum week{// used to create user defined data types
+    sun=1,
+    mon=2,
+    tue=3,
+    wed=2131231,
+    thu=5,
+    fri=6,
+    sat=7,
+
+};
+
+struct student//same as class with minor diff
+{
+    string name;
+    int age;
+    string dept;
+
+};
+
+int main(){
+    student s;
+    s.age=23;
+    s.dept="mech";
+    s.name="arjith";
+    cout<<s.age<<endl;
+    cout<<wed;
+    
+}
+
+```
