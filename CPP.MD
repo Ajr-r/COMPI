@@ -230,3 +230,68 @@ int main(){
 }
 
 ```
+# OOPS
+
+```C++
+#include<iostream>
+using namespace std;
+class student{ 
+    int rollno;//memebers are private by default
+    string name;
+    string dept;
+
+   public:
+   student(){
+    cout<<"in parameterless constructor";
+   }
+   student(int rollno,string name,string dept){
+        cout<<"in parameterized constructor"<<endl;
+        this->name=name;
+        this->rollno=rollno;
+        this->dept=dept;
+
+   }
+    void setRollno(int roll){
+        this->rollno=roll;
+    }
+     void setdept(string roll){
+        this->dept=roll;
+    }
+     void setname(string roll){
+        this->name=roll;
+    }
+    string getname(){
+        return this->name;
+    }
+      string getdept(){
+        return this->dept;
+    }
+      int getroll(){
+        return this->rollno;
+    }
+    void display(){
+        cout<<"hi my name is "<<name<<" i am from "<<dept<<" department and my rollno. is "<<rollno<<endl;
+    }
+
+    
+
+};
+int main(){
+    student s1;
+    s1.setname("arjith");
+    s1.setdept("Mech");
+    s1.setRollno(12345);
+    cout<<s1.getdept()<<endl;
+    cout<<s1.getname()<<endl;
+    cout<<s1.getroll()<<endl;
+    s1.display();
+    cout<<"------------using constructor------------"<<endl;
+    student s2(333,"sanjith","BBA");
+    s2.display();
+
+    
+    
+
+}
+
+```
