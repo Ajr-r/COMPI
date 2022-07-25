@@ -295,3 +295,46 @@ int main(){
 }
 
 ```
+# STATIC AND FRIEND FUNC
+```C++
+#include <iostream>
+using namespace std;
+    class gg{
+        public:
+        static int counter;//static var only declaration is allowed 
+        static void t(){//static method
+            cout<<"in static method"<<endl;
+        }
+        gg(){
+            counter++;
+            cout<<counter<<endl;
+        }
+
+
+    }; int gg::counter=0;//should be initialized outside the class
+class name{
+
+    string namee;
+    public:
+    name(string n){
+        namee=n;
+    }
+    friend void disp(name);//used to get private members of class & can also use friend class used to get private var and methods
+
+};
+void disp(name ne){//implementation of friend class should pass an object
+    cout<<ne.namee<<endl;
+}
+int main(){
+    int i =10;
+    while(i--){
+        gg g;
+
+    }
+    cout<<gg::counter<<endl;
+    gg::t();
+    name e("arjith");
+    disp(e);
+}
+
+```
