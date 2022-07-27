@@ -338,3 +338,34 @@ int main(){
 }
 
 ```
+# INHERITENCE
+```C++
+
+#include <iostream>
+using namespace std;
+
+    class f{//base class
+        public:
+        string name;
+        void d(){
+            cout<<"from parent class"<<endl;
+        }
+    };
+    class g :public f{//derived class
+        public:
+     
+        void s(){
+            cout<<"from child class"<<endl;
+        }
+
+    };
+    int main(){
+        g g;
+        g.name="arjith";
+        g.d();
+        g.s();
+    }
+
+
+
+```
