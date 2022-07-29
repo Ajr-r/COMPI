@@ -75,3 +75,26 @@ int main(){
 }
 
 ```
+# SMALLEST NEXT PALINDROME
+```C++
+#include<iostream>
+using namespace std;
+int main(){
+    int x;
+    string s,se;
+     cin>>x;     
+      
+    while(x--){
+        s=to_string(x);
+         for(int i =s.size()-1;i>=0;i--){
+            se+=s[i];
+        }
+        if(s==se){
+            cout<<se<<endl;
+            break;
+        }
+        se="";
+    }
+
+}
+```
