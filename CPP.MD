@@ -369,3 +369,19 @@ using namespace std;
 
 
 ```
+# MEMORY ALLOCATION
+```c++
+#include <iostream>
+using namespace std;
+int main(){
+int* p=(int*)malloc(sizeof(int)); //malloc is used allocate memory from heap and returns a void pointer therferore should typecaste to int pointer n store it
+//also has garbage vaule in the allocated memory
+free(p);//garbage collector is not in c++ so should manually free memory to prevent memory leak
+p=(int*)malloc(100*sizeof(int));//memory allocated 100*8bytes
+*p=20;//assigning value
+cout<<*p;
+int* arr=(int*)calloc(4,sizeof(int));//gives u 4 contiguous memory location and intialises the value to zero
+free(arr);
+free(p);
+}
+```
