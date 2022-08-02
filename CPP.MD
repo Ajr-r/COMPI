@@ -385,3 +385,31 @@ free(arr);
 free(p);
 }
 ```
+# VECTOR
+```C++
+#include<iostream>
+#include<vector>//header for vector
+#include<algorithm>
+using namespace std;
+int main(){
+  vector<int> v;
+  v.push_back(1);//add element like stack
+  v.push_back(2);
+  v.push_back(3);
+  v.push_back(4);
+
+  v.pop_back();//removes the last element added
+for(int i:v){//iterate for loop
+    cout<<i<<" "<<endl;
+}
+vector<int> v2(3,50);//can specify the size and value in it Ex:- 50, 50, 50
+for(int i:v2){
+    cout<<i<<" "<<endl;
+}
+swap(v,v2);//used ti swap values
+sort(v.begin(),v.end());
+cout<<"-------------------"<<endl;
+cout<<*v.begin()<<endl;
+
+}
+```
