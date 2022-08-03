@@ -98,3 +98,48 @@ int main(){
 
 }
 ```
+# 3
+Constraints
+
+All indices in this challenge are zero-based.
+All the given numbers are non negative and are not greater than 
+Output Format
+
+For each pair of  and  values (i.e., for each query), print a single integer that denotes the element located at index  of the array referenced by . There should be a total of  lines of output.
+
+Sample Input
+
+2 2
+3 1 5 4
+5 1 2 8 9 3
+0 1
+1 3
+Sample Output
+
+5
+9
+```c++
+#include <iostream>
+using namespace std;
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    int a,q;
+    cin>>a>>q;
+    int* ar[a];
+    for (int i=0;i<a;i++){
+      int e;
+      cin>>e;
+      ar[i]=new int [e];
+      for(int j=0;j<e;j++){
+        cin>>ar[i][j];//ar[i][j] represents a int varaible wherease ar[i] is a pointer
+    }  
+    }  
+ while(q--){
+  int y,u;
+  cin>>y>>u;
+  cout<<ar[y][u]<<endl;
+ }
+}
+
+```
