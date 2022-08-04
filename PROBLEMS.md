@@ -143,3 +143,74 @@ int main() {
 }
 
 ```
+# 4
+The first line of input will contain a single integer TT, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains a single integer NN, the length of string SS.
+The second line of each test case contains the string SS.
+Output Format
+For each test case, output on a new line the answer — YES if SS is easy to pronounce, and NO otherwise.
+
+Each character of the output may be printed in either uppercase or lowercase. For example, the strings YES, yeS, yes, and YeS will all be treated as identical.
+1≤T≤100
+1 \leq N \leq 1001≤N≤100
+SS contains only lowercase Latin characters, i.e, the characters \{a, b, c, \ldots, z\}{a,b,c,…,z}
+Sample 1:
+Input
+Output
+5
+5
+apple
+15
+schtschurowskia
+6
+polish
+5
+tryst
+3
+cry
+YES
+NO
+YES
+NO
+YES
+```c++
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t,n;
+	string s;
+	cin>>t;
+	while(t--){
+		bool f=1;
+		int c=0;
+		cin>>n;
+		cin>>s;
+
+		for(char i:s){
+			if(i!='a' and i!='e' and i!='o' and i!='u' and i!='i' ){
+				c++;
+			}
+			else{
+				c=0;
+			}
+		if(c>=4){
+			f=0;
+			break;
+		}
+		}
+		if(f){
+			cout<<"YES"<<endl;
+		}
+		else{
+			cout<<"NO"<<endl;
+			c=0;
+		}
+	}
+
+}
+	
+
+```
