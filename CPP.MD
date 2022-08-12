@@ -29,6 +29,24 @@ int main() {
 }
 
 ```
+# TYPE CONERSIONS
+```C++
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+string x = "5";
+int y ;
+y=stoi(x);
+
+cout<<y*y<<endl;
+
+
+   
+}
+```
 # DECISION STATMENTS
 ```C++
 #include<iostream>
