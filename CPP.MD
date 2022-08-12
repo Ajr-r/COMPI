@@ -38,10 +38,16 @@ using namespace std;
 
 int main() {
 string x = "5";
+char t='7';
 int y ;
 y=stoi(x);
+int e=t-'0';
 
-cout<<y*y<<endl;
+cout<<e<<endl;
+
+
+   
+}
 
 
    
