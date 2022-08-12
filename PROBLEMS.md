@@ -214,3 +214,92 @@ int main() {
 	
 
 ```
+# infy1
+Problem Statement
+read_more
+Consider a non-empty input string instr and generate outstr, a hash value such that:
+
+For each of the vowels in instr
+Multiply their index by 5. For the obtained result res, add the consecutive odd numbers starting from 1 up to res to get outnum
+If outnum is not a single digit, reduce it to a single digit by repetitively adding all the digits in outnum
+Replace the corresponding vowel in instr with outnum
+If no single vowel exists in instr return -1.
+
+Input format:
+
+Read instr from the standard input stream.
+
+Output format:
+
+Print the hash generated value to the standard output stream.
+
+Sample Input	Sample Output	Explanation
+Program		Pr7gr7m	
+For the given input instr the vowels are ‘o’ and ‘a’.
+
+Vowel ‘o’:
+Vowel ‘o’ is at index 2. Multiplying the index 2 with 5 results in 10. Adding the consecutive odd numbers starting with 1 up to 10,i.e. 1, 3, 5, 7 and 9 gives outnum ,25. Reducing outnum to single digit results in 7. Replacing ‘o’ with 7 gives ‘Pr7gram’
+
+Vowel ‘a’:
+Vowel ‘a’ is at index 5. Multiplying the index 5 with 5 results in 25. Adding the consecutive odd numbers starting with 1 up to 25, i.e. 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25 gives outnum ,169. Reducing outnum to single digit results in 7. Replacing ‘a’ with 7 gives ‘Pr7gr7m’ and hence the output
+
+Pg Dn btn prssd by RK	-1	
+There exists no vowel in the given input instr and hence the output is -1
+
+Languages: C#,Python 3,Java,C++,C,Scala,Go,Perl,Bash,TypeScript,Plain JavaScript,R,PHP,Ruby,Python,Clojure
+```C++
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  string s;
+  getline(cin,s);
+  int res=0;
+  int tr=0;
+  for(int i=0;i<s.size();i++){
+  int outnum=0;
+    if(s[i]=='a'||s[i]=='A'||s[i]=='e'||s[i]=='E'||s[i]=='i'||s[i]=='I'||s[i]=='o'||s[i]=='O'||s[i]=='u'||s[i]=='U'){
+      tr=1;
+      res=i*5;
+      for(int j=1;j<=res;j++){
+        if(j%2!=0){
+          outnum+=j;
+
+        }
+      }
+      while(1){
+
+      if(to_string(outnum).size()>1){
+        
+        string w=to_string(outnum);
+        outnum=0;
+        for(char q:w){
+          outnum+=q-'0';  
+        }
+      }
+        else{
+          break;
+        }
+        
+     
+      }
+     s[i]=outnum+(int)'0';
+    }
+  }
+  if(tr){
+
+  cout<<s<<endl;
+  }
+  else{
+  cout<<-1<<endl;
+
+  }
+
+
+    return 0;
+}    
+
+
+
+```
