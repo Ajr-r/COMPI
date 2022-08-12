@@ -40,11 +40,14 @@ int main() {
 string x = "5";
 char t='7';
 int y ;
-y=stoi(x);
-int e=t-'0';
+y=stoi(x);//string to int
+int e=t-'0';//char to int
 
 cout<<e<<endl;
-
+ int x=9;
+char r=x+(int)'0';//int to char
+string w=to_string(x);//int to string
+ cout<<r;
 
    
 }
