@@ -29,6 +29,23 @@ int main() {
 }
 
 ```
+# LOWERCASE AND UPPER CASE
+```C++
+#include<iostream>
+#include<algorithm>//Lib for transform func
+
+using namespace std;
+
+int main() {
+    char s='t';
+    char e=toupper(s);//char is immustable so store the updated char to another variable
+    string a="dio";//string is mutable
+    transform(a.begin(),a.end(),a.begin(),::toupper);
+    cout<<e<<endl;
+    cout<<a<<endl;
+}
+
+```
 # TYPE CONERSIONS
 ```C++
 
