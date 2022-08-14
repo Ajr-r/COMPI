@@ -33,6 +33,7 @@ int main()
     }
     //v1.sawap(v2)->swaps all elements
     v.clear();//clears the vector
+    sort(v.begin(), v.end(), greater<int>());//to sort the vector
    
 }
 ```
