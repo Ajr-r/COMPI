@@ -303,3 +303,28 @@ int main() {
 
 
 ```
+# BINARY CONVERSION
+```C++
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{   
+    int x=45;
+    string s="";
+    while(x>0){//conerting decimal base 10 to binary
+        s+=to_string(x%2);
+        x/=2;
+    }
+    reverse(s.begin(),s.end());//should reverse the order
+    cout<<s<<endl;
+    int y=0;
+    for(int i=0;i<s.size();i++){//converting from binary to decimal base 10
+        if(s[i]=='1'){
+            y+=pow(2,i);
+        }
+    }
+    cout<<y;
+}
+
+```
