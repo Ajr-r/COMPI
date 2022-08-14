@@ -328,3 +328,91 @@ int main()
 }
 
 ```
+# INFY ASS 1
+Problem Statement
+read_more
+Given an array of integers, find the equilibrium index of the array.
+
+In case of an array, A, its equilibrium index, i, is such that
+
+(A[0]+A[1]+……+A[i-1]) =  (A[i+1]+A[i+2]+……..+A[n-1]) where 0 < i < n-1
+
+Exception cases:
+
+0 should be considered as the equilibrium index, if A[1]+A[2]+…….+A[n-1] = 0
+n-1 should be considered as the equilibrium index, if A[0]+A[1]+…….+A[n-2] = 0
+-1 should be considered as the equilibrium index, if the condition for equilibrium index is not found to be true for any acceptable value of i.
+Input format:
+
+Read the array of elements from the standard input stream
+
+Output format:
+
+Print the equilibrium index to the standard output stream
+
+Sample Input		Sample Output	Explanation
+3,-4, 2, -1,-3, 2, 1	2	For the given input, the equilibrium index is 2 as sum of the elements to the left of index 2 is -1 and right of index 2 is also -1
+```C++
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    // Get the string
+    int f=1;
+    int ch1=0;
+    string str ;
+    getline(cin,str);
+ 
+    vector<int> v;
+ 
+    // Get the string to be taken
+    // as input in stringstream
+    stringstream ss(str);
+ 
+    // Parse the string
+    for (int i; ss >> i;) {
+        v.push_back(i);
+        ch1+=i;
+        
+        if (ss.peek() == ',')
+            ss.ignore();
+    }
+   
+  
+    if(ch1-v[0]==0){
+        
+        cout<<0;
+        return 0;
+    }
+    else if(ch1-v[v.size()-1]==0){
+         cout<<v.size()-1;
+        return 0;
+    }
+    else{
+
+    
+   
+   for(int j=1;j<v.size();j++){
+    int fh=0;
+    int sh=0;
+    for(int y=0;y<j;y++){
+        fh+=v[y];
+    }
+    for(int g=j+1;g<v.size();g++){
+        sh+=v[g];
+    }
+    if(fh==sh){
+        cout<<j<<endl;
+        f=0;
+        break;
+
+    }
+   }
+   if(f){
+    cout<<-1<<endl;
+   }
+    }
+}
+
+```
