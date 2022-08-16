@@ -34,6 +34,6 @@ int main()
     //v1.sawap(v2)->swaps all elements
     v.clear();//clears the vector
     sort(v.begin(), v.end(), greater<int>());//to sort the vector
-   
+   *max_element(v.begin(),v.end())//to find max element
 }
 ```
