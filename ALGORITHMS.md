@@ -30,3 +30,27 @@ int main()
     cout<<"end";
 }
 ```
+# SELECTION SORT
+```C++
+
+#include <iostream>
+
+using namespace std;
+ 
+int main(){
+    int n=6;
+    int ar[n]={6,5,4,3,2,1};
+    for(int i=0;i<n-1;i++){
+        for(int j=i+1;j<n;j++){
+            if(ar[i]>ar[j]){
+                swap(ar[i],ar[j]);
+            }
+        }
+    }
+   
+    for(int r:ar){
+        cout<<r<<" ";
+    }
+
+}
+```
