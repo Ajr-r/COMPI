@@ -416,3 +416,28 @@ int main()
 }
 
 ```
+# Sum of subarrays
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{ 
+  int sum=0;
+  int n=5;//Number of subarrays is n*(n+1)/2
+  int ar[n]={1,2,0,7,2};
+  for(int i=0;i<n;i++){
+    for(int j=i;j<n;j++){
+      sum+=ar[j];
+     cout<<sum<<" ";
+
+  }
+  sum=0;
+  }
+
+  
+      
+     
+    }
+
+```
