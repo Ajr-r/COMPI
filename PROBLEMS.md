@@ -441,3 +441,40 @@ int main()
     }
 
 ```
+# longest diff in array
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+
+{ 
+  int c=2;
+  int cmax=0;
+  int cdiff=0;
+
+  int pdiff=0;
+
+  int n=7;//Number of subarrays is n*(n+1)/2
+  int ar[n]={10,15,10,15,10,15,10};
+    pdiff=abs(ar[0]-ar[1]);
+  for(int i=1;i<n-1;i++){
+    cdiff=abs(ar[i]-ar[i+1]);
+    cout<<cdiff<<" "<<endl;
+    if(cdiff==pdiff){
+
+      c++;
+      cout<<"in if "<<c<<endl;
+     cmax=max(cmax,c);
+    }
+    else{
+      c=1;
+      pdiff=cdiff;
+    }
+   
+  
+  }
+  cout<<cmax<<endl;
+}
+
+```
