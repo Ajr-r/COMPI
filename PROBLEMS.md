@@ -529,3 +529,23 @@ int main()
 }
 	
 ```
+# armstrong number
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+
+{ 	
+	int n=153;
+	string s=to_string(n);
+	int r=0;
+	for(char i:s){
+		r+=(i-'0')*(i-'0')*(i-'0');
+	}
+	cout<<r;
+	
+	
+}
+	
+```
