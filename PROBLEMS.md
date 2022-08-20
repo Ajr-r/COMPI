@@ -544,7 +544,8 @@ int main()
 		r+=(i-'0')*(i-'0')*(i-'0');
 	}
 	cout<<r;
-	
+	cout<<__gcd(x,y);//using a function
+
 	
 }
 	
