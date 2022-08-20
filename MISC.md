@@ -28,4 +28,35 @@ int main()
     for (size_t i = 0; i < v.size(); i++)
         cout << v[i] << endl;
 }
+--------------------------------------------------------------------------------------------
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+
+{ 	
+	string s;
+	getline(cin,s);
+	cout<<s<<endl;
+	cout<<s.size()<<endl;
+
+	vector <int> v;
+	for(int i=0;i<s.size();i++){
+		if(s[i]==','){
+			continue;
+		}
+		else{
+			v.push_back(s[i]-'0');
+		}
+	}
+
+	for(int t:v){
+		cout<<t<<endl;
+	}
+
+
+
+
+}
+
 ```
