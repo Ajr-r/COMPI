@@ -478,3 +478,32 @@ int main()
 }
 
 ```
+# NUMBER OF OCCURENCE
+```C++
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+
+{ 
+	string s="hello world";
+	map<char,int> m;
+	map<char,int> ::iterator it;
+
+	for(int i=0;i<s.size();i++){
+		if(m.find(s[i])==m.end()){//find goes through the entire map if it is equal to map.end()then the element is not in the map
+			m[s[i]]=1;
+		}
+		else{
+			m[s[i]]++;
+		}
+	}
+	for(it=m.begin();it!=m.end();it++){
+		cout<<it->first<<" "<<it->second<<endl;
+	}
+
+
+
+
+}
+```
