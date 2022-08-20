@@ -37,3 +37,29 @@ int main()
    *max_element(v.begin(),v.end())//to find max element
 }
 ```
+# MAP AND PAIR
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    //keys are unique
+pair<char,int> p('r',9);
+p.first='a';
+p.second=7;
+cout<<p.first<<" "<<p.second<<endl;
+
+map <string,int> m={{"frieza",9200},{"nappa",4000}};
+m["goku"]=9000;
+m["vegeta"]=8000;
+map<string,int>::iterator i;
+for(i=m.begin();i!=m.end();i++){
+    cout<<i->first<<" "<<i->second<<endl;
+}
+m.erase("vegeta");
+cout<<m["vegeta"]<<endl;
+m.clear();//clears the map
+cout<<m.empty()<<endl;//returns 1 if empty else 0
+ 
+}
+```
