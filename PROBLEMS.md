@@ -507,3 +507,25 @@ int main()
 
 }
 ```
+# fibinocci sequence
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+
+{ 	
+	int m=8;
+	int n1=0;
+	int n2=1;
+	int n3=0;
+	cout<<n1<<endl<<n2<<endl;
+	for(int i=2;i<m;i++){
+		n3=n2+n1;
+		cout<<n3<<endl;
+		n1=n2;
+		n2=n3;
+	}
+}
+	
+```
