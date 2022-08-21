@@ -60,3 +60,25 @@ int main()
 }
 
 ```
+# BUIT IN PERMUTATION AND COMBINATION
+```C++
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+
+{ 	
+	char a[3]={'a','b','c'};
+	sort(a,a+3);//sorting the array as next_permutation func will generate lexicographically larger elements than last
+	do{
+		for(int i=0;i<3;i++){
+			cout<<a[i];
+		}
+		cout<<endl;
+	}while(next_permutation(a,a+3));
+	//using prev_permutation will generate smaller than previous arrangement but the array should be sorted in decending arder
+
+	
+}
+	
+```
