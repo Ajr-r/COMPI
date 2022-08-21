@@ -60,7 +60,7 @@ int main()
 }
 
 ```
-# BUIT IN PERMUTATION AND COMBINATION
+# BUILT IN PERMUTATION AND COMBINATION
 ```C++
 #include <bits/stdc++.h>
 using namespace std;
