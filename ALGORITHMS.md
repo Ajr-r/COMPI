@@ -20,7 +20,7 @@ int main()
         }
         else{
             if(ar[mid]>key){
-                e=mid-1;
+                e=mid-1;//adding 1 here so that if the element if not found e will be reduced less than s and the while loop will terminate same for s but oppo
             }
             else{
                 s=mid+1;
