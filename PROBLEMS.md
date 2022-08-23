@@ -589,3 +589,46 @@ int main(){
 }
 
 ```
+# apna 2
+<img width="614" alt="Screenshot 2022-08-23 195727" src="https://user-images.githubusercontent.com/100711675/186184547-441be63b-e00d-4f6f-9260-3f039e5dd294.png">
+
+
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main(){
+  int n=5;
+ int s=3;
+  int a[n]={1,2,3,7,5};
+  int i=0;
+  int j=0;
+  int sum=0;
+  while(sum<s){
+    sum+=a[j];
+    j++;
+  if(sum==s){
+    cout<<i+1<<" "<<j;
+    return 0;
+  }
+  }
+
+sum=0;
+i=j-1;
+while(i>=0){
+  sum+=a[i];
+  if(sum==s){
+    cout<<i+1<<" "<<j;
+    return 0;
+  }
+  i--;
+    
+  }
+
+  cout<<-1;
+
+  
+
+}
+
+```
