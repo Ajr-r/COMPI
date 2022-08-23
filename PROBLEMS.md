@@ -550,3 +550,39 @@ int main()
 }
 	
 ```
+# apna 1
+<img width="606" alt="Screenshot 2022-08-23 190751" src="https://user-images.githubusercontent.com/100711675/186172663-53ae99cd-519d-4777-a968-61df3d878525.png">
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main(){
+  int n=7;
+  int a[n]={1,5,3,4,3,5,6};
+  int amin=INT_MAX;
+  int y=*max_element(a,a+n);
+   int ar[y]={-1};
+  for(int i =0;i<y;i++){
+    ar[i]=-1;
+  }
+  for(int i =0;i<y;i++){
+    if(ar[a[i]]!=-1){
+      amin=min(amin,ar[a[i]]);
+    }
+    else{
+      ar[a[i]]=i;
+    }
+  
+  }
+  if(amin==INT_MAX){
+    cout<<-1;
+  }
+  else{
+    cout<<amin;
+  }
+
+ 
+
+}
+
+```
