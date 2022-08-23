@@ -63,7 +63,7 @@ cout<<m.empty()<<endl;//returns 1 if empty else 0
  
 }
 ```
-# VECTORS
+# SETS
 ```C++
 #include <bits/stdc++.h>
 using namespace std;
