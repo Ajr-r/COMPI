@@ -632,3 +632,39 @@ while(i>=0){
 }
 
 ```
+# apna 3
+<img width="506" alt="Screenshot 2022-08-23 212840" src="https://user-images.githubusercontent.com/100711675/186205766-6bdc4eb5-9d48-494b-b8db-4f8f12212cb2.png">
+
+
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {//find the lowest missing positive number ex 123...2 is missing the given array
+  int n=6;
+  int ar[n]={0,-9,1,3,-4,5};
+  int y =*max_element(ar,ar+n);
+  int b[y];//boolean array to mark the number which are present ex:-going to 3rd index and marking it 1
+  for(int i=0;i<y;i++){
+    b[i]=0;
+  }
+  for(int i=0;i<y;i++){
+    if(ar[i]>=0){
+        b[ar[i]]=1;
+    }
+  }
+  for(int i=0;i<y;i++){
+    if(b[i]==0){//first element which is missing
+        cout<<i;
+        break;
+    }
+  }
+
+  
+   
+    
+  
+}
+
+
+```
