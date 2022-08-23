@@ -79,5 +79,5 @@ int main()
 ```
 # array
 	use array+(n-1) for getting end value in array for fucntions like sort ,max use array+n
-	for vector v.begin()..etc to get to last value use n-1
+	for vector v.begin()..etc to get to last value use n-1 else index out of bounds in vector will crash the code
 	
