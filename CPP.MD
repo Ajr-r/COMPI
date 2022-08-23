@@ -236,6 +236,9 @@ int main(){
     int a;
     getline(cin,str);//also gets entire line use this 
     cout<<str.size();
+    string s="one piece";
+    string sub=s.substr(4,s.size()-1);
+    cout<<sub;
 }
 
 ```
