@@ -63,3 +63,42 @@ cout<<m.empty()<<endl;//returns 1 if empty else 0
  
 }
 ```
+# VECTORS
+```C++
+#include <bits/stdc++.h>
+using namespace std;
+    //Storing order – The set stores the elements in sorted order.
+    // Values Characteristics – All the elements in a set have unique values.
+    // Values Nature – The value of the element cannot be modified once it is added to the set, though it is possible to remove and then add the modified value of that element. Thus, the values are immutable.
+    // Search Technique – Sets follow the Binary search tree implementation.
+    // Arranging order – The values in a set are unindexed.
+    // Note: To store the elements in an unsorted(random) order,  unordered_set() can be used.
+int main() {//find the lowest missing positive number ex 123...2 is missing the given array
+set <int> s;
+  set<int, greater<int> > s1;//even after inserting random it sorts it in decending order
+s.insert(100);
+s.insert(93);
+s.insert(130);
+s.insert(1050);
+s.insert(102);
+cout<<s.size();
+// The time complexities for doing various operations on sets are:
+// Insertion of Elements – O(log N)
+// Deletion of Elements – O(log N)
+set <int>  :: iterator it;
+for(it=s.begin();it!=s.end();it++){
+    cout<<*it<<" ";
+}
+cout<<"\n-----------------------------\n";
+s.erase(s.begin(),s.find(102));//it exlusive of 102
+s.erase(1050);//can aslo store the removed value
+
+for(it=s.begin();it!=s.end();it++){
+    cout<<*it<<" ";
+}
+   
+    
+  
+}
+
+```
