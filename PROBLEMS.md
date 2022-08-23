@@ -552,6 +552,9 @@ int main()
 ```
 # apna 1
 <img width="606" alt="Screenshot 2022-08-23 190751" src="https://user-images.githubusercontent.com/100711675/186172663-53ae99cd-519d-4777-a968-61df3d878525.png">
+
+
+
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
