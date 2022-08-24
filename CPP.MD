@@ -460,3 +460,32 @@ cout<<*v.begin()<<endl;
 
 }
 ```
+# TRANSPOSE OF A MATRIX
+```C++
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+   int ar[3][3]={{1,2,3},
+                {1,2,3},
+                {1,2,3}};
+    for(int i=0;i<3;i++){
+
+    for(int j=i;j<3;j++){///j=i because to traverse only top right triangle ex:-1,2,3,2,3,3
+        if(i!=j){
+            swap(ar[i][j],ar[j][i]);
+        }
+    }
+    }
+    for(int i=0;i<3;i++){
+
+    for(int j=0;j<3;j++){
+     
+            cout<<ar[i][j]<<" ";
+   
+    }
+        cout<<"\n";
+    }
+
+}
+
+```
