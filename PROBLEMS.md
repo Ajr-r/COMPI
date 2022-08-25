@@ -668,3 +668,44 @@ int main() {//find the lowest missing positive number ex 123...2 is missing the 
 
 
 ```
+# infy ass 4
+<img width="332" alt="Screenshot 2022-08-25 230806" src="https://user-images.githubusercontent.com/100711675/186732597-a7115833-d29a-445c-b5bf-cc37fe13a53d.png">
+<img width="319" alt="Screenshot 2022-08-25 230849" src="https://user-images.githubusercontent.com/100711675/186732680-51beb644-9144-40d6-a24f-f5a76344cb3c.png">
+
+
+
+```c++
+
+#include <bits/stdc++.h>
+
+using namespace std;
+int main(){
+    int t,x,y;
+    cin>>t;
+    string s;
+    while(t--){
+        
+        cin>>x>>y;
+        cin>>s;
+        map <char,int> m;
+        for(char i:s){
+            if(m.find(i)==m.end()){
+                m[i]=1;
+            }
+            else{
+                m[i]++;
+            }
+            if(m[i]<=y){
+                cout<<i;
+                
+            }
+        }
+    cout<<"\n";
+
+    }
+}
+
+```
+
+
+
