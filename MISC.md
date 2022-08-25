@@ -81,3 +81,4 @@ int main()
 	use array+(n-1) for getting end value in array for fucntions like sort ,max use array+n
 	for vector v.begin()..etc to get to last value use n-1 else index out of bounds in vector will crash the code
 	
+# sometime if the getline() is not working properly use cin.ignore()
