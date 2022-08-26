@@ -239,6 +239,7 @@ int main(){
     string s="one piece";
     string sub=s.substr(4,s.size()-1);
     cout<<sub;
+    s.erase(0,2)//erases the char starting from index 0 and number char to be erased from 0
 }
 
 ```
