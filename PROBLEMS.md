@@ -689,7 +689,7 @@ int main(){
         cin>>s;
         map <char,int> m;
         for(char i:s){
-            if(m.find(i)==m.end()){
+            if(m.find(i)==m.end()){////also can just use m[i]++ instead of the if condition to store the occurence
                 m[i]=1;
             }
             else{
