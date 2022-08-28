@@ -182,7 +182,7 @@ int main() {
 ```
 # RECURSION
  ```C++
- #include <bits/stdc++.h>
+#include <bits/stdc++.h>
 # define c cout
 # define nl "\n"
 using namespace std;
@@ -194,9 +194,23 @@ int fact(int n){
     return n*fact(n-1);
 
      }
+     
+     <img width="637" alt="Screenshot 2022-08-28 165810" src="https://user-images.githubusercontent.com/100711675/187071813-c00705c3-fa01-47e9-a29c-93f5b8a36e3a.png">
+
+     
+     
+int fib(int m ){
+    if(m==0||m==1){
+        return m;
+    }
+
+    return fib(m-1)+fib(m-2);
+}
 int main(){
     int n=5;
+    int m=4;
     c<<fact(n)<<nl;
+    c<<fib(m)<<nl;
 }
  
  ```
