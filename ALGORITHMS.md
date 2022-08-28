@@ -198,7 +198,7 @@ int fact(int n){
  ```
  
  
-     <img width="637" alt="Screenshot 2022-08-28 165810" src="https://user-images.githubusercontent.com/100711675/187071813-c00705c3-fa01-47e9-a29c-93f5b8a36e3a.png">
+ <img width="637" alt="Screenshot 2022-08-28 165810" src="https://user-images.githubusercontent.com/100711675/187071813-c00705c3-fa01-47e9-a29c-93f5b8a36e3a.png">
 
  ```c++    
      
