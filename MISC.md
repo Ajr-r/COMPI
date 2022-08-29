@@ -82,3 +82,8 @@ int main()
 	for vector v.begin()..etc to get to last value use n-1 else index out of bounds in vector will crash the code
 	
 # sometime if the getline() is not working properly use cin.ignore()
+# FOR GETTING DECIMAL POINTS
+```c++
+cout.precision(2); //2 number of digits after point
+else C<<fixed<<x<<l;//use fixed to display decimal points
+```
