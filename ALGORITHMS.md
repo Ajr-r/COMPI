@@ -217,3 +217,29 @@ int main(){
 }
  
  ```
+# RECURSION-REVERSING A STRING 
+```C++
+#include <bits/stdc++.h>
+# define c cout
+# define nl "\n"
+using namespace std;
+void reverse(string s){
+	if(s.size()==0){
+		return;
+	}
+	string ros=s.substr(1);
+	reverse(ros);
+	c<<s[0]<<nl;
+
+}
+ 
+int main()
+{ 
+	string s="goku";
+	
+	reverse(s);
+}
+	
+
+
+```
