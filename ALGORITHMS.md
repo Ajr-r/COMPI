@@ -243,3 +243,26 @@ int main()
 
 
 ```
+# TOWER OF HANOI
+```C++
+#include <bits/stdc++.h>
+using namespace std;
+# define C cout
+# define l "\n";
+
+void towerofhanoi(int n,char src,char dest,char help){
+    if(n==0) return;
+    towerofhanoi(n-1,src,help,dest);
+    C<<"move from "<<src<<" to "<<dest<<l
+    towerofhanoi(n-1,help,dest,src);
+}
+
+int main()
+{   
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    towerofhanoi(3,'a','c','b');
+    return 0;
+}
+
+```
