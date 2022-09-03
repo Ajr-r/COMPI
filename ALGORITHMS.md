@@ -266,3 +266,8 @@ int main()
 }
 
 ```
+# TO FIND SUM TILL N
+```C++
+ int x=10;
+    C<<x*(x+1)/2<<l
+```
