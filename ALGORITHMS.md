@@ -271,3 +271,55 @@ int main()
  int x=10;
     C<<x*(x+1)/2<<l
 ```
+# TO REMOVE DUPLICATES
+```C++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std;
+string removedup(string s){
+    if(s.length()==0){
+        return "";
+    }
+    char ch=s[0];
+    string ans =removedup(s.substr(1));//GOES TILL THE END OF THE STRING AND IN EVERY LOOP THE LETTER IS STORED IN CH AFTER HITTING THE BASE CONDTION WHILE COMMING BACK IT GOES THROUGHT THE IF LOOP
+    if(ch==ans[0]){
+        return ans;
+    }
+    return ch+ans;
+}
+void solve(){
+    string s="aaaabbbccc";
+    string y=removedup(s);
+    C<<y<<l
+}
+ 
+
+  
+
+
+   
+
+
+
+  
+ 
+int main()
+{ 
+	ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+	ll t=1;
+	
+	while(t--){
+		solve();
+	}
+
+	return 0;
+	
+	
+}
+	
+
+```
