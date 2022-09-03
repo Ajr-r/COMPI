@@ -323,3 +323,45 @@ int main()
 	
 
 ```
+# STEPS RECURSIVE
+```C++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std;
+int steps(int n){
+    if(n==1||n==2){
+        return n;
+    }
+    else if(n==3) return 4;
+    return steps(n-1)+steps(n-2)+steps(n-3);
+}
+
+void solve(){
+    int n=2;
+    C<<steps(n)<<l
+
+
+  
+}
+
+int main()
+{ 
+	ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+	ll t=1;
+	
+	while(t--){
+		solve();
+	}
+
+	return 0;
+	
+	
+}
+	
+
+
+```
