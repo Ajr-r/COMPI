@@ -336,7 +336,7 @@ int steps(int n){
         return n;
     }
     else if(n==3) return 4;// as caluclate there 4 possiblites to climb if there are 3 stairs
-    return steps(n-1)+steps(n-2)+steps(n-3);
+    return steps(n-1)+steps(n-2)+steps(n-3);//these possiblilties again branch out like what if you took 1 step initally or 2 step initally
 }
 
 void solve(){
