@@ -181,6 +181,16 @@ int main() {
 
 ```
 # RECURSION
+Steps to for recursive solution
+
+
+
+<img width="303" alt="Screenshot 2022-09-06 141636" src="https://user-images.githubusercontent.com/100711675/188590509-3e3140cd-700e-4be8-96d5-6b3655363bf7.png">
+
+
+
+
+
  ```C++
 #include <bits/stdc++.h>
 # define c cout
