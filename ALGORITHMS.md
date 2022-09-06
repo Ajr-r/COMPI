@@ -375,3 +375,46 @@ int main()
 
 
 ```
+# No. of paths till last grid in matrix
+```c++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std;
+
+
+int path(int n ,int m){
+    if(n==1||m==1)return 1;
+    return path(n,m-1)+path(m,n-1);
+}
+
+void solve(){
+    C<<path(4,4)<<l
+    
+    
+
+
+  
+}
+
+int main()
+{ 
+	ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+	ll t=1;
+	
+	while(t--){
+		solve();
+	}
+
+	return 0;
+	 
+	
+}
+	
+
+
+
+```
