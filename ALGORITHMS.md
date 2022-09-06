@@ -418,3 +418,106 @@ int main()
 
 
 ```
+# Knapsack
+# normal approch
+
+```c++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+# define ll long long 
+# define ld long double 
+using namespace std;
+
+
+
+void solve(){
+       int val[] = { 100,50,150};
+    int wt[] = { 10, 20, 30 };
+    int w=50;
+    int sum=0;
+    int n=3;
+        for(int i=1;i<n;i++){
+        for(int j=0;j<n-i;j++){
+            if(val[j]<val[j+1]){
+                swap(val[j],val[j+1]);
+                swap(wt[j],wt[j+1]);
+            }
+        }
+    }
+    for(int i=0;i<3;i++){
+        if(wt[i]<=w){
+            sum+=val[i];
+            w-=wt[i];
+        }
+    }
+  C<<sum<<l
+
+
+  
+}
+
+int main()
+{ 
+	ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+	ll t=1;
+	
+	while(t--){
+		solve();
+	}
+
+	return 0;
+	 
+	
+}
+	
+
+
+```
+# recursive approach
+```c++
+
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+# define ll long long 
+# define ld long double 
+using namespace std;
+int knap(int val[],int wt[],int w,int n){
+    if(w==0||n==0)return 0;
+    if(wt[n-1]>w)return knap(val,wt,w,n-1);
+    return max(knap(val,wt,w-wt[n-1],n-1)+val[n-1],knap(val,wt,w,n-1));
+
+}
+
+
+
+void solve(){
+ 
+     int val[] = { 100,50,150};
+    int wt[] = { 10, 20, 30 };
+    int w=50;
+    C<<knap(val,wt,w,3)<<l
+  
+}
+
+int main()
+{ 
+	ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+	ll t=1;
+	
+	while(t--){
+		solve();
+	}
+
+	return 0;
+	 
+	
+}
+	
+
+
+
+```
