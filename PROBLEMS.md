@@ -796,3 +796,53 @@ int main()
 
 
 ```
+
+
+# INFY Lexico beads
+
+<img width="330" alt="Screenshot 2022-09-07 221106" src="https://user-images.githubusercontent.com/100711675/188933652-3f493683-1197-4250-a47c-45c4a4c60875.png">
+
+<img width="301" alt="Screenshot 2022-09-07 221042" src="https://user-images.githubusercontent.com/100711675/188933662-4fe8950e-09f0-4323-9cd3-16b699156b04.png">
+
+
+
+
+```c++
+
+void solve(){
+    int k;
+    cin>>k;
+    string s;
+    cin>>s;
+    string mina="z";
+    if(k<2){//if k is more than 1 then suffling will generate same result as sorting
+        for(int i=0;i<s.length();i++){
+            char temp=s[0];
+            s.erase(0,1);
+            s+=temp;
+            mina=min(mina,s);
+        }
+        C<<mina<<l
+    }
+    else{
+        sort(s.begin(),s.end());
+        C<<s<<l
+    }
+  
+
+  
+  
+   
+  
+    
+
+  
+    
+   
+  
+
+}
+  
+
+
+```
