@@ -87,3 +87,4 @@ int main()
 cout.precision(2); //2 number of digits after point
 else C<<fixed<<x<<l;//use fixed to display decimal points
 ```
+# find function in unordered set is faster than binary search 
