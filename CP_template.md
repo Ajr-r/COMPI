@@ -12,8 +12,9 @@ int bs(vector <int> v,int key,bool f){
 		else if(v[mid]>key)e=mid-1;
 		else i=mid+1;
 		}	
-	if(f&&ans>=0)return 1;
-	else return ans;
+		if(f&&ans>=0&&ans<v.size())return 1;
+    		else if(f&&ans<0)return 0;
+		else return ans;
 }
 
 void solve(){
