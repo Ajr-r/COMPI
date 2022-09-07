@@ -706,6 +706,93 @@ int main(){
 }
 
 ```
+# Infyq
+
+
+<img width="315" alt="Screenshot 2022-09-07 131051" src="https://user-images.githubusercontent.com/100711675/188818784-bde5f1b0-41f4-465c-8797-5c2d1eb2d31a.png">
 
 
 
+<img width="307" alt="Screenshot 2022-09-07 131128" src="https://user-images.githubusercontent.com/100711675/188818902-9cd8b0d6-6b85-4af5-b71d-3aa353388581.png">
+
+
+```c++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+using namespace std;
+int bs(vector <int> v,int key,bool f){
+	int i=0,e=v.size()-1,ans=-1;
+	while(i<=e){
+		int mid=(i+e)/2;
+		if(v[mid]==key){ans=mid;break;
+		}
+		else if(v[mid]>key)e=mid-1;
+		else i=mid+1;
+		}	
+	if(f&&ans>=0)return 1;
+	else return ans;
+}
+
+void solve(){
+	int c=0;
+	int k;
+	cin>>k;
+	string s;
+	cin.ignore();
+	getline(cin,s);
+	vector <int> v;
+	map <string,int> m;
+	stringstream ss(s);
+	string sub;
+	while(ss.good()){
+		getline(ss,sub,',');
+		m[sub]++;
+	}
+	for(auto i:m){
+		v.push_back(i.second);
+	}
+	sort(v.begin(),v.end());
+	for(int i=0;i<v.size();i++){
+			int t=v[i];
+			v[i]-=k;
+			k-=t;
+
+		if(v[i]>0){
+			c++;
+		}
+	}
+	
+	C<<c<<l
+
+
+	
+	
+
+
+	
+
+	
+	
+
+}
+
+ 
+int main()
+{ 
+	ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+	int t=1;
+	
+	while(t--){
+		solve();
+	}
+
+	return 0;
+	
+	
+}
+	
+
+
+```
