@@ -4,34 +4,23 @@
 # define l "\n";
 using namespace std;
 int bs(vector <int> v,int key,bool f){
-	int i=0;
-	int e=v.size()-1;
-	int ans=-1;
+	int i=0,e=v.size()-1,ans=-1;
 	while(i<=e){
 		int mid=(i+e)/2;
-		if(v[mid]==key){
-			ans=mid;
-			break;
+		if(v[mid]==key){ans=mid;break;
 		}
-		else if(v[mid]>key){
-			e=mid-1;
-		}
+		else if(v[mid]>key)e=mid-1;
 		else i=mid+1;
-	}
-	if(f&&ans>=0){
-		return 1;
-
-	}
-	else{
-		return ans;
-	}
+		}	
+	if(f&&ans>=0)return 1;
+	else return ans;
 }
 
 void solve(){
 	C<<"das"<<l
 	vector <int> v={5,6,7,8,9};
-	int key=0;
-	 C<<bs(v,key,1)<<l
+	int key=7;
+	 C<<bs(v,key,0)<<l
 	
 
 	
@@ -54,6 +43,8 @@ int main()
 	
 }
 	
+
+
 
 
 ```
