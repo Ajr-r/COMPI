@@ -19,3 +19,7 @@ void solve(){
 
 }
 ```
+# Balls and boxes
+```C++
+//if number of balls is equal to or greater than sum of n natural number then it can the boxes can have unique set of balls and with min 1 ball ber box and n is number of boxes
+```
