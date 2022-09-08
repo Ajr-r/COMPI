@@ -95,7 +95,7 @@ for(it=s.begin();it!=s.end();it++){
 }
 cout<<"\n-----------------------------\n";
 s.erase(s.begin(),s.find(102));//it exlusive of 102
-s.erase(1050);//can aslo store the removed value
+int y=s.erase(1050);//can aslo store the removed value
 
 for(it=s.begin();it!=s.end();it++){
     cout<<*it<<" ";
