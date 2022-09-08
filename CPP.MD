@@ -41,6 +41,7 @@ int main() {
     char e=toupper(s);//char is immustable so store the updated char to another variable
     string a="dio";//string is mutable
     transform(a.begin(),a.end(),a.begin(),::toupper);
+    reverse(s.begin(),s.end();//also works on array
     cout<<e<<endl;
     cout<<a<<endl;
 }
