@@ -68,3 +68,67 @@ int main() {
 }
 
 ```
+# TRANSPOSE OF A MATRIX
+```C++
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+   int ar[3][3]={{1,2,3},
+                {1,2,3},
+                {1,2,3}};
+    for(int i=0;i<3;i++){
+
+    for(int j=i;j<3;j++){///j=i because to traverse only top right triangle ex:-1,2,3,2,3,3
+        if(i!=j){
+            swap(ar[i][j],ar[j][i]);
+        }
+    }
+    }
+    for(int i=0;i<3;i++){
+
+    for(int j=0;j<3;j++){
+     
+            cout<<ar[i][j]<<" ";
+   
+    }
+        cout<<"\n";
+    }
+
+}
+
+```
+# ADDING 2 MATRIX
+```C++
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int n1=3;
+    int n2=4;
+    int n3=3;
+   int m1[n1][n2]={{2,4,1,2},
+                {8,4,3,6},
+                {1,7,9,5},};
+    int m2[n2][n3]={{1,2,3},
+                    {4,5,6},
+                    {7,8,9},  
+                    {4,5,6},}  ;
+    int ans[n1][n3];
+    for(int i=0;i<n1;i++){
+        for(int j=0;j<n3;j++){
+            ans[i][j]=0;
+
+            for(int k=0;k<n2;k++){//common row ex:-n2
+                ans[i][j]+=m1[i][k]*m2[k][j];
+
+    }
+        }
+
+}
+ for(int i=0;i<n1;i++){
+        for(int j=0;j<n3;j++)
+            cout<<ans[i][j]<<" ";
+            cout<<"\n";
+}
+}
+
+```
