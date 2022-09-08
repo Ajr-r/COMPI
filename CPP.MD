@@ -172,8 +172,8 @@ int main()
     cout<<*p<<endl;// again '*' is used to print data stored in the address that the pointer holds
     cout<<&p<<endl;//can also print the address of the pointer
     
-    ## pointer & reference variables
-    ref-as we should declare and initialize references at single step,no deferrencing is required to obtain the value from ref also cant  reassigned 
+    // pointer & reference variables
+  //  ref-as we should declare and initialize references at single step,no deferrencing is required to obtain the value from ref also cant  reassigned 
     
     int b=50;
     int& g=b;//'&' after the datatype indicates a reference variable changing the value for ref var will change the value of original as well
