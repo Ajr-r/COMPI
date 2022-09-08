@@ -61,6 +61,9 @@ cout<<m["vegeta"]<<endl;
 m.clear();//clears the map
 m.find(); //returns a iterator which points to the key, else returns the iterator which is same as m.end()
 cout<<m.empty()<<endl;//returns 1 if empty else 0
+  map <int,int> m={{1,2}};
+    if(m.find(1)==m.end())C<<"s"<<l
+    C<<m.find(1)->first<<l// "-> " is used to get the value from the iterator
  
 }
 ```
