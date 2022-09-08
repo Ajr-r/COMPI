@@ -65,6 +65,8 @@ cout<<e<<endl;
 char r=x+(int)'0';//int to char
 string w=to_string(x);//int to string
  cout<<r;
+ strin s="dasd";
+ s+=r;//adding char to string
 
    
 }
