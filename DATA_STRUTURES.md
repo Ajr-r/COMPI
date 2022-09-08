@@ -59,6 +59,7 @@ for(i=m.begin();i!=m.end();i++){
 m.erase("vegeta");
 cout<<m["vegeta"]<<endl;
 m.clear();//clears the map
+m.find(); //returns a iterator which points to the key, else returns the iterator which is same as m.end()
 cout<<m.empty()<<endl;//returns 1 if empty else 0
  
 }
