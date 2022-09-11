@@ -788,3 +788,57 @@ void solve(){
   
 
 ```
+
+# infy ass10
+
+
+<img width="308" alt="Screenshot 2022-09-11 144731" src="https://user-images.githubusercontent.com/100711675/189520252-3f4daa23-9eeb-4733-8e46-ab440b2109b3.png">
+
+
+```c++
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+  
+    string inputString;
+   cin>>inputString;
+    int hh=stoi(inputString.substr(0,2));
+    if( inputString[8]=='P'){
+        if(hh==12){
+             cout<<12;
+        for(int i=2;i<=7;i++){
+            cout<< inputString[i];
+        }
+        }
+        else{
+        cout<<12+hh;
+        for(int i=2;i<=7;i++){
+            cout<< inputString[i];
+        }
+        cout<<endl;
+        }
+    }
+    else{
+         if(hh==12){
+             cout<<"00";
+               for(int i=2;i<=7;i++){
+            cout<< inputString[i];
+        }
+         }
+         else{
+                 for(int i=0;i<=7;i++){
+            cout<< inputString[i];
+        }
+         }
+       
+    
+        cout<<endl;
+    }
+    
+    
+    return 0;
+}
+
+```
