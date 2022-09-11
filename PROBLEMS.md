@@ -842,3 +842,37 @@ int main() {
 }
 
 ```
+#infy ass5
+
+<img width="322" alt="Screenshot 2022-09-11 200005" src="https://user-images.githubusercontent.com/100711675/189533037-45a416e4-ed5b-4da6-b72d-9da0af77d9c7.png">
+
+<img width="308" alt="Screenshot 2022-09-11 195956" src="https://user-images.githubusercontent.com/100711675/189533048-212f2cf6-94b1-4ff0-9c09-e4fe915d5910.png">
+
+
+```c++
+
+void solve(){
+    int n;
+    cin>>n;
+    vector <int> v;
+   
+    int sum=0;
+    for(int i=0;i<n;i++){
+        int y;
+        cin>>y;
+        v.push_back(y);
+        
+    }
+    sort(v.begin(),v.end());
+    while (n>3)
+    {   
+        sum+=min((v[0]+(v[1]*2)+v[n-1]),((v[0]*2)+v[n-1]+v[n-2]));
+      
+        n-=2;
+    }
+    if(n==3)sum+=v[0]+v[1]+v[2];
+    else if(n==2)sum+=v[1];
+    else sum+=v[0];
+    C<<sum<<l
+    }
+```
