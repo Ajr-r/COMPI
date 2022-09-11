@@ -866,7 +866,7 @@ void solve(){
     sort(v.begin(),v.end());
     while (n>3)
     {   
-        sum+=min((v[0]+(v[1]*2)+v[n-1]),((v[0]*2)+v[n-1]+v[n-2]));
+        sum+=min((v[0]+(v[1]*2)+v[n-1]),((v[0]*2)+v[n-1]+v[n-2]));//1st conditon is when 1st element is not that much less than the rest of the element
       
         n-=2;
     }
