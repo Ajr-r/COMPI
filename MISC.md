@@ -89,3 +89,6 @@ else C<<fixed<<x<<l;//use fixed to display decimal points
 ```
 # find function in unordered set is faster than binary search 
 # unordererd data structures are faster than order structure ex:- unordered set and unordered map
+# IMPORTNANT POINT
+!! Trying to erase a element in a array which is for loop it will skip the next element after erasing due to index relocation better to store the wanted value in diff array
+
