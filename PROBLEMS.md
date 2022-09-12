@@ -876,3 +876,79 @@ void solve(){
     C<<sum<<l
     }
 ```
+# infyass 7
+
+<img width="323" alt="Screenshot 2022-09-12 121450" src="https://user-images.githubusercontent.com/100711675/189589781-1a6578a1-b033-4c9f-8769-5df53c9f685a.png">
+
+
+<img width="291" alt="Screenshot 2022-09-12 121509" src="https://user-images.githubusercontent.com/100711675/189589806-cc38aed4-7b67-441d-94ec-49be5461c7af.png">
+
+
+```
+6
+3 6
+1 6
+7 11
+2 15
+5 8
+1 2
+```
+```c++
+void solve(){
+    int n;
+    cin>>n;
+    vector<int> v1;
+    vector<int> v2;
+   
+    int maxc=-1;
+    int ans=INT_MAX;
+    int count=0; 
+    int maxcount=-1;
+   
+    bool f=0;
+
+    
+    for(int i=0;i<n;i++){
+        int y;
+        cin>>y;
+        v1.push_back(y);
+
+       
+        int u;
+        cin>>u;
+        v2.push_back(u);
+
+  
+     
+        
+
+    }
+    
+
+    for( int j=0;j<n;j++){
+        for(int i=0;i<n;i++){
+            if(v1[j]>=v1[i]&&v1[j]<=v2[i]){
+                count++;
+            }
+        }
+           
+            if(count>maxcount){
+                maxcount=count;
+                ans=v1[j];
+              
+            }
+            else if(count==maxcount){
+                if(ans>v1[j]){
+                    ans=v1[j];
+                }
+            }
+             count=0;
+      
+    }
+    C<<ans<<" "<<maxcount<<l
+
+   
+    
+}
+
+```
