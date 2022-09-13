@@ -66,6 +66,25 @@ cout<<m.empty()<<endl;//returns 1 if empty else 0
     C<<m.find(1)->first<<l// "-> " is used to get the value from the iterator
  
 }
+//vector matrix
+vector <vector<int>> v;
+        for(int i=0;i<n;i++){
+            vector <int> temp;
+            for(int j=0;j<n;j++){
+                int t;
+                cin>>t;
+                temp.push_back(t);
+            }
+            v.push_back(temp);
+        }
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                C<<v[i][j]<<" ";
+            }
+            C<<endl;
+        }
+
+    }
 ```
 # SETS
 ```C++
