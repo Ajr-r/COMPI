@@ -1,3 +1,32 @@
+
+# to find if number prime or not
+```c++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std; 
+int main()
+{
+    int x=73;
+    bool f=1;
+for(int i=2;i*2<=x;i++){
+
+    if(x%i==0){
+        f=0;
+        
+        C<<"NO"<<l
+        break;
+    }
+   
+        
+
+}
+if(f) C<<"YES"<<l
+}
+
+```
 # 1
 Write a C++ program to convert specified days into years, weeks and days. Note: Ignore leap year.
 
