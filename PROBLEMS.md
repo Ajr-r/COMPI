@@ -981,3 +981,90 @@ void solve(){
 }
 
 ```
+# infy q
+You are given an integer N. Now, you need to find if there exists two prime numbers (X,Y) such that X^2+y^2=N. If (X,Y) exists then output the minimum value of X+Y otherwise print -1.
+
+Input format: The first line contains an integer, N, denoting the value of N described in the problem.
+
+Constraints: 1<=N<=10^9.
+
+Sample Input:
+
+input: 7
+output: -1
+explanation: for N=7 no such X,Y exists.
+
+input: 34
+output: 8
+explanation: X=5 and Y=3 satisfy the condition 25+9=34.
+
+input: 13
+output: 5
+explanation: X=2 and Y=3 satisfy the condition 4+9=13.
+
+```c++
+
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std; 
+bool isprime(int x){
+    bool f;
+    if(x==1){
+        return 1;
+    }
+    for(int i=2;i*i<=x;i++){
+
+    if(x%i==0){
+        f=0;
+        
+        return 0;
+    }
+   
+        
+
+}
+if(f) return 1;
+
+}
+
+
+int main()
+{   bool f=1;
+    int r;
+    cin>>r;
+    map <int,int>m;
+    for(int i=2;i*i<=r;i++){
+        if(isprime(i)){
+            m[i*i]++;
+        }
+    }
+   if(m.size()<=1) {
+   
+    C<<"-1"<<l
+    f=0;
+   }
+   else{
+    for(auto i:m){
+       
+        if(i.first<r){ 
+            auto y=m.find(r-i.first);
+            if(y->first!=i.first&&y!=m.end()){
+                C<<sqrt(y->first)+sqrt(i.first)<<l
+                f=0;
+                break;
+
+
+            }
+        }
+    }
+   }
+   if(f){
+    C<<-1<<l
+   }
+   
+
+}
+```
