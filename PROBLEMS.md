@@ -1068,3 +1068,46 @@ int main()
 
 }
 ```
+# infy ez
+
+<img width="509" alt="Screenshot 2022-09-13 214611" src="https://user-images.githubusercontent.com/100711675/189953658-f0a47c50-d92f-4442-8f4b-370cc655f5e5.png">
+
+
+```c++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std; 
+int main()
+{
+      vector <int> vp;
+      vector <int> vn;
+      string s;
+      cin>>s;
+      int sum=0;
+      stringstream ss(s);
+      string sub;
+      while(ss.good()){
+        getline(ss,sub,',');
+        int r=stoi(sub);
+        if(r>=0) vp.push_back(r);
+        else vn.push_back(r);
+      }
+      sort(vp.begin(),vp.end(),greater<int>());
+      sort(vn.begin(),vn.end());
+      for(int i=0;i<vp.size();i++){
+        sum+=abs(vp[i]-vn[i]);
+      }
+      int i=0;
+      int j=vp.size()-1;
+      while(i<j){
+        sum+=abs(vn[i]-vn[j]);
+        i++;
+        j--;
+      }
+      C<<sum<<l
+}
+
+```
