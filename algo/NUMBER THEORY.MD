@@ -1,13 +1,26 @@
 # IMPORTANT NOTES
-$ odd +/- odd = even
-  even +/- even = even
-  odd +/- even = odd
-  even +/- odd = odd
-  odd x odd = odd
-  even x even = even
-  odd x even = even
+$ odd +/- odd = even,
+  even +/- even = even,
+  odd +/- even = odd,
+  even +/- odd = odd,
+  odd x odd = odd,
+  even x even = even,
+  odd x even = even,
   even x odd = even
   
+  <img width="443" alt="Screenshot 2022-09-14 184750" src="https://user-images.githubusercontent.com/100711675/190165031-91ffd1b0-4902-4cbb-8518-c7058bd5f9bc.png">
+
+
+```c++
+
+void solve(){
+    int x;
+    cin>>x;
+    if(x%2==0)C<<4<<" "<<x-4;
+    else C<<9<<" "<<x-9;   
+}
+
+```
 # TO FIND SUM TILL N
 ```C++
  int x=10;
