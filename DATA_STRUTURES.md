@@ -104,6 +104,17 @@ vector <vector<int>> v;
         }
 
     }
+    for( char i:s){
+        if(m.find(i)==m.end()){
+            m[i]++;//while checking for a element if not present also selt the value to 1 else the map doesnt store the value
+            sum+=2;
+        }
+        else{
+          
+            m[i]++;
+            sum++;
+        }
+    }
 ```
 # SETS
 ```C++
