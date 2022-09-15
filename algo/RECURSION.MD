@@ -65,7 +65,25 @@ int main()
 	
 	reverse(s);
 }
-	
+----------------------------------------------
+string rev(string s,int n,string r){
+    if(n>2){
+        return "";
+    }
+    char t=s[n];
+    r=rev(s,n+1,r);
+    return r+t;
+}
+
+int main()
+{
+    string s="abc";
+    int n=s.size()-1;
+    string y="";
+     y=rev(s,0,y);
+     C<<y<<l
+
+}
 ```
 # TOWER OF HANOI
 ```C++
