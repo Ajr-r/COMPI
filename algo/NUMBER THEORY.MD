@@ -46,3 +46,22 @@ void solve(){
 ```C++
 //if number of balls is equal to or greater than sum of n natural number then it can the boxes can have unique set of balls and with min 1 ball ber box and n is number of boxes
 ```
+# elephant 1,2,3,4,5
+```c++
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,a;
+    cin>>n;
+    if(n%5==0)
+    {
+       a=n/5;
+    }
+    else
+        a=(n/5)+1;
+    cout<<a<<endl;
+ 
+}
+```
