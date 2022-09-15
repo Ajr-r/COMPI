@@ -1111,3 +1111,54 @@ int main()
 }
 
 ```
+# CC 1600
+
+<img width="524" alt="Screenshot 2022-09-15 140052" src="https://user-images.githubusercontent.com/100711675/190355527-53c8a3ad-8304-4d0d-ba83-0a55277d1a34.png">
+
+
+```
+4
+6 4
+2 2 3 3 2 2
+1 1
+1
+5 3
+1 2 3 4 5
+4 3
+6 12 18 24
+
+```
+
+```c++
+void solve(){
+    int n,k;
+    cin>>n>>k;
+    int a[n];
+    int b[n];
+    int g=0,m=0,c=0;
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+        g=__gcd(g,a[i]);//to get the gcd of all numbers
+    }
+    bool f=1;
+    for(int i:a){
+        m=__gcd(m,i);//checks the gcd of sub arrays
+        if(m==g){
+            c++;
+            m=0;// if gcd is same then reset the gcd for next pair
+            if(c>=k){// for inputs like 1 1 1 4 5
+                C<<"YES"<<l
+                f=0;
+                break;
+            }
+        }
+
+    }
+    if(f)C<<"NO"<<l
+
+}
+
+
+
+```
+
