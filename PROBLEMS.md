@@ -1162,3 +1162,35 @@ void solve(){
 
 ```
 
+# infy hungry fish
+```c++
+
+#include <bits/stdc++.h>
+using namespace std;
+# define C cout
+# define l "\n";
+int main(){
+    int x=10;
+    int a[]={9,20,25,100};
+    sort(a,a+4);
+    int c=0;
+    for(int i:a){
+        if(i<x){
+            x+=i;
+        }
+        else {
+            if(i<x+(x-1)){
+                x+=x-1;
+                x+=i;
+                c++;
+            }
+            else{
+                c++;
+
+            } 
+        }
+
+    }
+    C<<c<<l
+}
+```
