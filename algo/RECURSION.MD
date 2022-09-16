@@ -86,17 +86,24 @@ int main()
 }
 ```
 # TOWER OF HANOI
-```C++
+```c++
 #include <bits/stdc++.h>
 using namespace std;
 # define C cout
 # define l "\n";
-
+//if the number disk to be moved at any point is odd the top most disk will move to dest , if even it will move to help...imagine with 2 disks
 void towerofhanoi(int n,char src,char dest,char help){
     if(n==0) return;
+    C<<n<<" "<< " source "<<src<<" "<<" destination "<<dest<<" "<<" helper "<<help<<l
     towerofhanoi(n-1,src,help,dest);
-    C<<"move from "<<src<<" to "<<dest<<l
-    towerofhanoi(n-1,help,dest,src);
+
+    C<<"move "<<n<< " from "<<src<<" to "<<dest<<l
+
+         C<<n<<" "<< " source "<<src<<" "<<" destination "<<dest<<" "<<" helper "<<help<<l
+
+
+
+    towerofhanoi(n-1,help,dest,src); // again same as the void towerofhanoi(int n,char src,char dest,char help){
 }
 
 int main()
@@ -106,6 +113,31 @@ int main()
     towerofhanoi(3,'a','c','b');
     return 0;
 }
+
+
+```
+```
+3  source a  destination c  helper b
+2  source a  destination b  helper c
+1  source a  destination c  helper b
+move 1 from a to c
+1  source a  destination c  helper b
+move 2 from a to b
+2  source a  destination b  helper c
+1  source c  destination b  helper a
+move 1 from c to b
+1  source c  destination b  helper a
+move 3 from a to c
+3  source a  destination c  helper b
+2  source b  destination c  helper a
+1  source b  destination a  helper c
+move 1 from b to a
+1  source b  destination a  helper c
+move 2 from b to c
+2  source b  destination c  helper a
+1  source a  destination c  helper b
+move 1 from a to c
+1  source a  destination c  helper b
 
 ```
 # TO REMOVE DUPLICATES
