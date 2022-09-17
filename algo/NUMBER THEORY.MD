@@ -10,8 +10,8 @@ $ odd +/- odd = even,
   
   
   
-$ if n is even the number of even and odd numbers are n/2, if n is odd then count of odd numbers is n/2+1 and even is n-n/2+1
-  to calculate sum of n odd numbers n*(n+1)
+$ if n is even the number of even and odd numbers are n/2, if n is odd then count of odd numbers is (n/2)+1 and even is n-n/2+1
+  to calculate sum of n odd numbers n*(n+1), if n is even the diff b/w sum of even and odd numbers is n/2 if n is odd then diff is(n+1)/2
   
   <img width="443" alt="Screenshot 2022-09-14 184750" src="https://user-images.githubusercontent.com/100711675/190165031-91ffd1b0-4902-4cbb-8518-c7058bd5f9bc.png">
 
