@@ -7,6 +7,9 @@ $ odd +/- odd = even,
   even x even = even,
   odd x even = even,
   even x odd = even
+  
+  
+  
 $ if n is even the number of even and odd numbers are n/2, if n is odd then count of odd numbers is n/2+1 and even is n-n/2+1
   to calculate sum of n odd numbers n*(n+1)
   
