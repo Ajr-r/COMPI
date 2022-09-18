@@ -379,3 +379,40 @@ int main()
 
 
 ```
+# printing all subsubtrings
+
+```c++
+
+
+#include <bits/stdc++.h>
+using namespace std;
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+void wy(string s,string ans){
+    if(s.size()==0){
+        C<<ans<<l
+        return ;
+    }
+    char ch=s[0];
+    wy(s.substr(1),ans);
+    wy(s.substr(1),ans+ch);
+    
+
+   
+}
+
+
+int main()
+{
+  string s="abc";
+wy(s,"");
+    
+
+    
+
+
+  
+}
+```
