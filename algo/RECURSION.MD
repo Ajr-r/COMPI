@@ -416,3 +416,24 @@ wy(s,"");
   
 }
 ```
+# permutaion
+```c++
+void permu(string s,string ans){
+    if(s.size()==0){
+        C<<ans<<l
+        return ;
+    }
+    for(int i=0;i<s.size();i++){
+        char ch=s[i];
+        string ros=s.substr(0,i)+s.substr(i+1);
+        permu(ros,ans+ch);
+    }
+}
+
+void solve(){
+    string s="abc";
+    permu(s,"");
+
+}
+
+```
