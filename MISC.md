@@ -92,3 +92,5 @@ else C<<fixed<<x<<l;//use fixed to display decimal points
 # IMPORTNANT POINT
 !! Trying to erase a element in a array which is for loop it will skip the next element after erasing due to index relocation better to store the wanted value in diff array
 
+
+!!use int** a to pass matrix to functions
