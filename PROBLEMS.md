@@ -1194,3 +1194,46 @@ int main(){
     C<<c<<l
 }
 ```
+# infy teamdivision
+
+<img width="299" alt="Screenshot 2022-09-20 131409" src="https://user-images.githubusercontent.com/100711675/191197838-9f4cc762-d78b-424f-b5d5-71eb18c54689.png">
+
+
+<img width="86" alt="Screenshot 2022-09-20 131529" src="https://user-images.githubusercontent.com/100711675/191198122-1f0695c3-c379-4970-b01a-0b05d48052ec.png">
+
+
+
+```
+Input:
+87,100,28,67,68,41,67,1
+
+output
+229 230
+```
+```c++
+int diff(vector <int> v,int n,int s1,int s2,int lens1,int lens2){
+    if(n==0){
+        if(abs(lens2-lens2)>1){
+            return INT_MAX;
+        }     
+        return abs(s1-s2);
+    }
+     return min(diff(v,n-1,s1,s2,lens1,lens2),diff(v,n-1,s1+v[n-1],s2-v[n-1],lens1+1,lens2-1));
+}
+void solve(){
+    string s;
+    getline(cin,s);
+    stringstream ss(s);
+    string sub;
+    vector <int> v;
+    int sum=0;
+    while(ss.good()){
+        getline(ss,sub,',');
+        v.push_back(stoi(sub));
+        sum+=stoi(sub);
+    }
+    int n=v.size();
+    int mindiff=diff(v,n,0,sum,0,n);
+    C<<(int)(((float)sum/2)-(float)mindiff/2)<<" "<<(int)(((float)sum/2)+(float)mindiff/2)<<l
+}
+```
