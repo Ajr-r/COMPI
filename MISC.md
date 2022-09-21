@@ -1,4 +1,18 @@
-# 1> In order to reach the conditon limit faster mess with i in condition part in for loop EX: for(int i=0;i*i<=x;i++)
+
+# IMPORTNANT POINT
+!! Trying to erase a element in a array which is for loop it will skip the next element after erasing due to index relocation better to store the wanted value in diff array
+
+!!sometime if the getline() is not working properly use cin.ignore()
+
+!!find function in unordered set is faster than binary search 
+
+!!unordererd data structures are faster than order structure ex:- unordered set and unordered map
+
+!!use int** a to pass matrix to functions
+
+!!sometime if the getline() is not working properly use cin.ignore()
+
+!!In order to reach the conditon limit faster mess with i in condition part in for loop EX: for(int i=0;i*i<=x;i++)
 
 # To take input separated by comma
 ```c++
@@ -81,16 +95,32 @@ int main()
 	use array+(n-1) for getting end value in array for fucntions like sort ,max use array+n
 	for vector v.begin()..etc to get to last value use n-1 else index out of bounds in vector will crash the code
 	
-# sometime if the getline() is not working properly use cin.ignore()
+
 # FOR GETTING DECIMAL POINTS
 ```c++
 cout.precision(2); //2 number of digits after point
 else C<<fixed<<x<<l;//use fixed to display decimal points
 ```
-# find function in unordered set is faster than binary search 
-# unordererd data structures are faster than order structure ex:- unordered set and unordered map
-# IMPORTNANT POINT
-!! Trying to erase a element in a array which is for loop it will skip the next element after erasing due to index relocation better to store the wanted value in diff array
+# For passing matrix in a function
+```c++
+int n=5;//use int** a as formal parameters in a function
+    int** a=new int*[n];
+    for(int i=0;i<n;i++){
+        a[i]=new int[n];
+    }
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            cin>>a[i][j];
+        }
+    } 
+    int** s=new int*[n];
+    for(int i=0;i<n;i++){
+        s[i]=new int[n];
+    }
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+          s[i][j]=0;
+        }
+    } 
 
-
-!!use int** a to pass matrix to functions
+```
