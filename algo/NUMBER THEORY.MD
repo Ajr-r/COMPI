@@ -73,3 +73,22 @@ int main()
  
 }
 ```
+
+<img width="293" alt="Screenshot 2022-09-24 203849" src="https://user-images.githubusercontent.com/100711675/192105336-0d7d30ef-4a38-4ded-84c0-ba0b00b0f019.png">
+
+
+```c++
+//only works for 2 inputs
+
+def maxHeight(h1, h2):
+    return ((h1 * h2) - h1 - h2)
+ 
+
+lst = input().split(',')
+h1 = int(lst[0])
+h2 = int(lst[1])
+ 
+print(max(0, maxHeight(h1, h2)))
+
+
+```
