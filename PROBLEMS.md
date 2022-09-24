@@ -1237,3 +1237,57 @@ void solve(){
     C<<(int)(((float)sum/2)-(float)mindiff/2)<<" "<<(int)(((float)sum/2)+(float)mindiff/2)<<l
 }
 ```
+# infy codecrack
+
+<img width="305" alt="Screenshot 2022-09-24 200016" src="https://user-images.githubusercontent.com/100711675/192103623-6296c96d-a2a5-4b4c-a5b3-25305acb8763.png">
+
+<img width="286" alt="Screenshot 2022-09-24 200047" src="https://user-images.githubusercontent.com/100711675/192103639-5f297a19-2f8d-487c-b7cc-55845c478f9b.png">
+
+
+```
+input:-
+Array : 10.0.1.45 -/d/in/intheclass,10.0.1.45-/a/facts/final/bhgahf,10.3.54.123-/d/xyz/bcc/yes
+
+Array : 10.3.54.123 -/d/in/intheclass,10.0.1.45-/a/facts/final/bhgahf,10.3.54.123-/d/xyz/bcc/yes
+
+output:-
+10.0.1.45
+10.3.54.123
+
+```
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+int main(){
+    string s;
+    getline(cin,s);
+    string se="";
+    for(char i:s){
+        if(isdigit(i)||i=='.'||i=='-'){
+            se+=i;
+        }
+    }
+    map <string,int> m;
+    string maxs;
+    int maxe=INT_MIN;
+    stringstream ss(se);
+    string sub;
+    while(ss.good()){
+        getline(ss,sub,'-');
+        m[sub]++;
+    }
+    for(auto i:m){
+        if(i.second>maxe){
+            maxe=i.second;
+            maxs=i.first;
+        }    
+    }
+    C<<maxs;
+}
+
+
+```
