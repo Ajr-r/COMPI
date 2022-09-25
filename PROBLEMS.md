@@ -1291,3 +1291,69 @@ int main(){
 
 
 ```
+# infy ccc 4
+
+<img width="293" alt="Screenshot 2022-09-24 203849" src="https://user-images.githubusercontent.com/100711675/192142447-1402f245-f477-4d4d-8b03-df8e522616c4.png">
+
+
+```
+input:-
+101000011 5
+1100000100111 6
+10101010101111010101 4
+```
+
+```c++
+
+#include <bits/stdc++.h>
+using namespace std;
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+int main(){
+string s;
+cin>>s;
+int d;
+cin>>d;
+int i=0;
+int c=0;
+bool f=1;
+while(i<s.size()-1){
+  C<<c<<" "<<i<<l
+     if(s[i+d]=='1'){
+        c++;
+        i+=d;
+        continue;
+
+    }
+       else if(s[i+2]=='1'){
+        c++;
+        i+=2;
+        continue;
+
+    }
+        else if(s[i+1]=='1'){
+        c++;
+        i+=1;
+        continue;
+
+        }
+        
+    C<<-1<<l
+    f=0;
+    break;
+
+}
+if(f){
+    C<<c<<l
+}
+
+
+
+ 
+
+}
+
+```
+
