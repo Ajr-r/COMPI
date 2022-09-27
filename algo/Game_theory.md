@@ -47,3 +47,28 @@ class Solution {
 };
 
 ```
+# 2
+Jack and Jelly are on the ship en route to discover Atlantis and decide to play a game. The distance between their starting point and the city of Atlantis is N kilometers. They take turns manning the ship and each of them can steer the ship for 1, 2, or 4 kilometers in one turn. This should never exceed the remaining distance. The captain who is in charge of the ship when they react Atlantis wins the game.
+If Jelly starts as the captain in charge of the ship, find who wins the game, i.e., who will be in charge of the ship when they reach Atlantis given both Jack and Jelly play optimally.
+```
+ex:- distances
+n=1->jelly will win as it takes her 1 step
+n=2->jelly will win as it takes her 2 step
+n=3
+  ->jelly can take 1 step
+    ->jack will take 2 step and win
+  ->jelly can take 2 step
+    ->jack will take 1 step and win//so for 3 jelly cant win
+n=4->jelly can take 4 step and win
+n=5->jelly can take 2 step
+      ->jack will be on n=3 while n=3 the first player cant win ...so jelly wins
+n=6->jelly can take 1 step
+      ->again same scenario as n=5 first player in n=5 wins aka jack
+    ->jelly can take 2 step
+      ->jack takes 4 step and wins
+    ->  jelly can take 4 step
+       ->jack takes 2 step and wins
+
+so we can conclude that if the distance is divisble by 3 jack will win else jelly will win
+       
+```
