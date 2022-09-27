@@ -1,5 +1,6 @@
 #impotant points
 !! make the p1 as your main target and you want him to win
+
 !! analys the problem and try to bring up solutions for small testcases
 
 !! find the pattern and implement it 
