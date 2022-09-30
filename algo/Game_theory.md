@@ -75,6 +75,7 @@ so we can conclude that if the distance is divisble by 3 jack will win else jell
 ```
 
 # grundy method
+  if output is 0 then p1 looses else he wins
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
