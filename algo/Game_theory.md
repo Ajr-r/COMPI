@@ -73,3 +73,29 @@ n=6->jelly can take 1 step
 so we can conclude that if the distance is divisble by 3 jack will win else jelly will win
        
 ```
+
+# grundy method
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+# define C cout
+# define l "\n";
+int clacmex(unordered_set <int> s){
+    int i=0;
+    while(s.find(i)!=s.end())i++;
+    return i;
+}
+int calcnimbers(int n){
+    unordered_set <int> s;
+    s.insert(n-1);
+    s.insert(n-2);
+    s.insert(n-4);
+    return clacmex(s);
+
+} 
+int main(){
+    int n;
+    cin>>n;
+    C<<calcnimbers(n)<<l
+}
+```
