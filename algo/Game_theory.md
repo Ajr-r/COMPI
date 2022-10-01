@@ -100,3 +100,34 @@ int main(){
     C<<calcnimbers(n)<<l
 }
 ```
+#  3 stacks having x,y and z coins you can remove 1,2 or 4 coins from any stack determine if p1 wins or p2
+Sprague grundy theorm
+```c++
+
+#include <bits/stdc++.h>
+using namespace std;
+# define C cout
+# define l "\n";
+int clacmex(unordered_set <int> s){
+    int i=0;
+    while(s.find(i)!=s.end())i++;
+    return i;
+}
+int calcnimbers(int n){
+    unordered_set <int> s;
+    s.insert(n-1);
+    s.insert(n-2);
+    s.insert(n-4);
+    return clacmex(s);
+
+} 
+int main(){
+    int x,y,z;
+    cin>>x,y,z; 
+    int xe,ye,ze;
+    xe=calcnimbers(x);
+    ye=calcnimbers(y);
+    ze=calcnimbers(z);
+    C<<((xe^ye)^ze)<<l
+}
+```
