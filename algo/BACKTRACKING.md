@@ -99,7 +99,7 @@ int main()
 
 
 ```
-N Queen
+# N Queen
 ```c++
 
 #include <bits/stdc++.h>
