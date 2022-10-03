@@ -99,3 +99,68 @@ int main()
 
 
 ```
+N Queen
+```c++
+
+#include <bits/stdc++.h>
+using namespace std;
+# define C cout
+# define l "\n";
+bool issafe(int** a,int x,int n,int col){
+    
+    for(int i=x;i>=0;i--){
+        if(a[i][col]==1)return false;
+    }
+    int i=x;
+    int y=col;
+    while(i>=0&&y>=0){
+        if(a[i][y]==1)return false;
+        i--;
+        y--;
+    }
+    i=x;
+    y=col;
+     while(i>=0&&y<n){
+        if(a[i][y]==1)return false;
+        i--;
+        y++;
+    }
+    return true;
+}
+
+bool queen(int** a,int x,int n){
+    if(x>=n) return true;
+    
+    for(int col=0;col<n;col++){
+        if(issafe(a,x,n,col)){
+            a[x][col]=1;
+            
+            if(queen(a,x+1,n))return true;
+            a[x][col]=0;
+
+        }
+    }
+    return false;
+}
+
+int main(){
+    int n;
+    cin>>n;
+    int** a=new int*[n];
+    for(int i=0;i<n;i++){
+        a[i]=new int[n];
+        for(int j=0;j<n;j++){
+            a[i][j]=0;
+        }
+    }
+    queen(a,0,n);
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+           C<<a[i][j]<<" ";
+        }
+        C<<l
+    }
+
+}
+
+```
