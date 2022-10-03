@@ -443,7 +443,7 @@ free(p);
 ```
 # BIT MANUPULATION
   
-  GETBIT
+
   ```C++
   
   #include <bits/stdc++.h>
