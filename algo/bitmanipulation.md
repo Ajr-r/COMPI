@@ -54,3 +54,22 @@ int main(){
   C<<ispower2(n)<<l  
 }
 ```
+# coun the number of 1s
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+# define C cout
+# define l "\n";
+int count1s(int n){
+    int c=0;
+    while(n){
+        n=n&n-1;//this flip the rightmost and after set bit continously which reduces the number of 1s
+        c++;
+    }
+    return c;
+}
+int main(){
+  int n=8;
+  C<<count1s(n)<<l  
+}
+```
