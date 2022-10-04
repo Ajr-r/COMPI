@@ -38,3 +38,19 @@ int main(){
 }
 
   ```
+# finding if a number is power of 2
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+# define C cout
+# define l "\n";
+int ispower2(int n){
+    if(n==1)return 0;
+    return (n&&!(n&n-1));//first n is there if n=0, for any power of 2 in binary form only 1 setbit will be there and n-1 binary form will have right most and after setbit flipped
+                        //if doing and operation leads to zero then n is power of 2
+}
+int main(){
+  int n=1;
+  C<<ispower2(n)<<l  
+}
+```
