@@ -131,3 +131,19 @@ int main(){
     C<<((xe^ye)^ze)<<l
 }
 ```
+# 3 stacks with n coins p1 and p2 play turn by turn can take any number of coins determine the winner
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+# define C cout
+# define l "\n";
+int main(){
+    int a[]={4,3,5};
+    int xorsum=0;
+    for(int i:a)xorsum^=i;//fallows sprague grundy theorm since there is no limit for number coins that can be removed grundy number is equal to the number of coins
+
+    if(xorsum==0)C<<"p2 wins";
+    else C<<"p1 wins";
+}
+
+```
