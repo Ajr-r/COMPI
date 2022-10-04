@@ -131,7 +131,7 @@ int main(){
     C<<((xe^ye)^ze)<<l
 }
 ```
-# 3 stacks with n coins p1 and p2 play turn by turn can take any number of coins determine the winner
+# game of nim 3 stacks with n coins p1 and p2 play turn by turn can take any number of coins determine the winner
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
