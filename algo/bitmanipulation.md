@@ -73,3 +73,26 @@ int main(){
   C<<count1s(n)<<l  
 }
 ```
+# getting all subsets
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+# define C cout
+# define l "\n";
+void subsets(char a[],int n){
+    for(int i=0;i<(1<<n);i++){
+        for(int j=0;j<n;j++){
+            if(i&(1<<j)){
+                C<<a[j]<<" ";
+            }
+        }
+        C<<l
+    }
+    
+}
+int main(){
+    char a[3]={'a','b','c'};
+    subsets(a,3);
+
+}
+```
