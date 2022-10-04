@@ -99,3 +99,23 @@ print(max(0, maxHeight(h1, h2)))
 
 
 ```
+# to find the divisors faster
+
+```c++
+	 for(int i=2;i<=sqrt(n);i++){
+	     if(n%i==0){
+            if(n/i==i){
+                v.push_back(i);
+                xorsum^=i;
+            }
+            else{
+                v.push_back(i);
+                v.push_back(n/i);
+                xorsum^=i;
+                xorsum^=n/i;
+            }
+	       
+	     }
+	 }
+
+```
