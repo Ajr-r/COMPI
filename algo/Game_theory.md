@@ -81,23 +81,40 @@ so we can conclude that if the distance is divisble by 3 jack will win else jell
 using namespace std;
 # define C cout
 # define l "\n";
-int clacmex(unordered_set <int> s){
+ 
+unordered_map <int,int> m={{0,0}};
+
+int mex(unordered_set <int> s,int n){
     int i=0;
     while(s.find(i)!=s.end())i++;
+    m[n]=i;
     return i;
-}
-int calcnimbers(int n){
-    unordered_set <int> s;
-    s.insert(n-1);
-    s.insert(n-2);
-    s.insert(n-4);
-    return clacmex(s);
 
-} 
+}
+
+
+int calcnim(int n,int a,int b){
+    unordered_set <int> s;
+    if(m.find(n-a)==m.end())
+         s.insert(n-a);
+    else s.insert(m[n-a]);     
+   if(m.find(n-b)==m.end())
+         s.insert(n-b);
+    else s.insert(m[n-b]); 
+  
+
+    return mex(s,n);
+
+}
 int main(){
-    int n;
-    cin>>n;
-    C<<calcnimbers(n)<<l
+    int n=10;
+    for(int i=0;i<=n;i++){
+
+        calcnim(i,2,4);
+    }
+   for(auto i:m){
+    C<<i.first<<" "<<i.second<<l
+   }
 }
 ```
 # 3
