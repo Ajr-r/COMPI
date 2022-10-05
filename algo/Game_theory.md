@@ -199,3 +199,52 @@ public:
     }
 };
 ```
+# infy (lvl 3)
+Alice and Bob are playing a game with a stack of N cards. Players take their turn alternatively. In each turn a player can remove atleast A and atmost B cards from the stack unless there are less than A cards left in the stack, in that case player has to pick all the cards left.
+
+The one who will start the game is decided by a coin toss. If the coin lands 'heads' Alice will start else Bob will start.
+
+If a player cannot make the next move, then the player loses the game. If both the players play optimally, your task is to determine how many times does Alice wins the game from the T test cases.
+
+
+<img width="295" alt="Screenshot 2022-10-05 140916" src="https://user-images.githubusercontent.com/100711675/194018266-b20ded46-ab52-4e86-b241-89127a43436d.png">
+
+
+<img width="287" alt="Screenshot 2022-10-05 140959" src="https://user-images.githubusercontent.com/100711675/194018371-2561f745-7bfc-4ba3-99d6-8b759aff4b42.png">
+
+
+```c++
+
+#include <bits/stdc++.h>
+using namespace std;
+# define C cout
+# define l "\n";
+
+
+
+
+
+
+int main(){
+    int t;
+    cin>>t;
+    int alicecount=0;
+    int q;
+    cin>>q;
+
+    while(t--){
+        int n,a,b,toss;
+        cin>>n>>a>>b>>toss;
+        if(toss==1){
+            if(((n^a)^b)>0)alicecount++;
+        }
+        if(toss==0){
+            if(((n^a)^b)<=0)alicecount++;
+        }
+     
+        
+    }
+    C<<alicecount<<l
+}
+
+```
