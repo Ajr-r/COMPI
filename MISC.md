@@ -1,5 +1,7 @@
 
 # IMPORTNANT POINT
+!! dont compare string.size() to -1 it will give wrong reading
+
 !! Trying to erase a element in a array which is for loop it will skip the next element after erasing due to index relocation better to store the wanted value in diff array
 
 !!sometime if the getline() is not working properly use cin.ignore()
