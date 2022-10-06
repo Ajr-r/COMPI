@@ -27,6 +27,49 @@ if(f) C<<"YES"<<l
 }
 
 ```
+# Y-shape pattern
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+vector<string> yShapedPattern(int n) {
+        // code here
+        vector<string> s;
+        string se="";
+        int y=n;
+		
+        for(int i=0;i<n/2;i++){
+            for(int k=0;k<i;k++)
+            se+=" ";
+            for(int j=0;j<=y;j++){
+				
+                if(j==0)se+="*";
+                else if(j==y)se+="*";
+                else se+=" ";
+                
+            }
+            y-=2;
+			
+            s.push_back(se);
+			se="";
+        }
+		for(int i=0;i<n/2;i++)se+=" ";
+		se+="*";
+        for(int i=0;i<n/2;i++)s.push_back(se);
+        return s;
+    }
+int main() {
+	vector <string> s;
+	s=yShapedPattern(4);
+	for(auto i:s){
+		cout<<i<<endl;
+	}
+
+	
+}
+
+
+```
 # 1
 Write a C++ program to convert specified days into years, weeks and days. Note: Ignore leap year.
 
