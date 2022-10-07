@@ -36,6 +36,20 @@ for(int i=0;i<n;i++){
 }
 
 ```
+# shift operator
+```c++
+#include <iostream>
+using namespace std;
+ 
+int main() {
+ 
+    int x = 19;
+    cout<<"x << 1 = "<< (x << 3) <<endl;//multiply x * 2^3
+    cout<<"x >> 1 = "<< (x >> 1) <<endl;
+    return 0;
+}
+```
+
 
   
   <img width="443" alt="Screenshot 2022-09-14 184750" src="https://user-images.githubusercontent.com/100711675/190165031-91ffd1b0-4902-4cbb-8518-c7058bd5f9bc.png">
