@@ -123,3 +123,57 @@ print(max(0, maxHeight(h1, h2)))
 ```c++
  return ((P + B - H) * (P + B - H) * (PI / 4));
 ```
+# GFG-doors
+Given n doors and n persons. The doors are numbered 1 to n and persons are given id’s numbered 1 to n. Each door can have only 2 status open and closed. Initially all the doors have status closed. Find the final status of all the doors if a person changes the current status of all the doors, i.e. if status open then change to status closed and vice versa, for which he is authorized. A person with id ‘i’ is authorized to change the status of door numbered ‘j’ if ‘j’ is a multiple of ‘i’. 
+
+```c++
+
+// C++ implementation of
+// doors open or closed
+#include <bits/stdc++.h>
+using namespace std;
+
+// Function to check whether 'n'
+// has even number of factors or not
+bool hasEvenNumberOfFactors(int n)
+{
+	int root_n = sqrt(n);//number of doors that are opened 
+
+	// if 'n' is a perfect square
+	// it has odd number of factors
+	if ((root_n*root_n) == n)
+		return false;
+
+	// else 'n' has even
+	// number of factors
+	return true;
+}
+
+// Function to find and print
+// status of each door
+void printStatusOfDoors(int n)
+{
+	for (int i=1; i<=n; i++)
+	{
+		// If even number of factors
+		// final status is closed
+		if (hasEvenNumberOfFactors(i))
+			cout << "closed" << " ";
+
+		// else odd number of factors
+		// final status is open
+		else
+			cout << "open" << " ";
+	}
+}
+
+// Driver program
+int main()
+{
+	int n = 5;
+	printStatusOfDoors(n);
+	return 0;
+}
+
+
+```
