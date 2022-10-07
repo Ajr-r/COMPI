@@ -1393,10 +1393,51 @@ if(f){
 }
 
 
-
- 
-
 }
 
 ```
+# GFG string rotate
+Given two strings a and b. The task is to find if the string 'b' can be obtained by rotating another string 'a' by exactly 2 places.
+```
+Input:
+a = amazon
+b = azonam
+Output: 1
+Explanation: amazon can be rotated anti
+clockwise by two places, which will make
+it as azonam.
 
+Input:
+a = geeksforgeeks
+b = geeksgeeksfor
+Output: 0
+Explanation: If we rotate geeksforgeeks by
+two place in any direction , we won't get
+geeksgeeksfor.
+```
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+    bool isRotated(string str1, string str2)    {
+        // Your code here
+        string sa=str1.substr(0,2);
+        string a=str1.substr(2);
+        string b=str1.substr(0,str1.size()-2);
+        string sb=str1.substr(str1.size()-2);
+        cout<<a+sa<<endl;
+         cout<<sb+b<<endl;
+        
+        if(a+sa==str2)return 1;
+        if(sb+b==str2)return 1;
+        return 0;                 
+    }
+int main()
+{
+    string str1 = "amazon";
+    string str2 = "azonam";
+
+    isRotated(str1, str2) ? cout << "Yes"
+                          : cout << "No";
+    return 0;
+}
+```
