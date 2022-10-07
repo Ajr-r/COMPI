@@ -119,3 +119,7 @@ print(max(0, maxHeight(h1, h2)))
 	 }
 
 ```
+# to find inside circle in a rightangled triangle
+```c++
+ return ((P + B - H) * (P + B - H) * (PI / 4));
+```
