@@ -22,6 +22,18 @@ $ if n is even the number of even and odd numbers are n/2, if n is odd then coun
   
   
 $ max gcd in range of n is n/2
+
+
+# modulo
+```c++
+//(a+b)%m=((a%m)+(b%m))%m
+//(a*b)%m=((a%m)*(b%m))%m
+for(int i=0;i<n;i++){
+    int sum*=i%m;//same as the formula
+    int sum+=i%m;//same as the formula
+}
+
+```
   
   <img width="443" alt="Screenshot 2022-09-14 184750" src="https://user-images.githubusercontent.com/100711675/190165031-91ffd1b0-4902-4cbb-8518-c7058bd5f9bc.png">
 
