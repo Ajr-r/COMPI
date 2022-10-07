@@ -28,6 +28,7 @@ $ max gcd in range of n is n/2
 ```c++
 //(a+b)%m=((a%m)+(b%m))%m
 //(a*b)%m=((a%m)*(b%m))%m
+//(a*b)%m=((a%m)-(b%m)+m)%m
 for(int i=0;i<n;i++){
     int sum*=i%m;//same as the formula
     int sum+=i%m;//same as the formula
