@@ -1441,3 +1441,17 @@ int main()
     return 0;
 }
 ```
+# GFG lazy carter problem
+```c++
+   	int maximum_Cuts(int n){
+   	    
+   	    if(n==0)return 1;
+   	    // Code here
+   	    return n+(maximum_Cuts(n-1));
+   	}  
+	//non recursion
+	{
+	return (n * ( n + 1)) / 2 + 1;
+	}
+	
+```
