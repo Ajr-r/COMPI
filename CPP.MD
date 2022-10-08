@@ -76,6 +76,15 @@ string w=to_string(x);//int to string
    
 }
 ```
+# MEMSET
+```C++
+	 int b[y+1];
+	 memset(b,-1,sizeof(b));//only can set 0 or -1 for int array
+     bool b[y+1];
+	 memset(b,0,sizeof(b));// can work for char 
+    
+
+```
 # DECISION STATMENTS
 ```C++
 #include<iostream>
