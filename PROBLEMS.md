@@ -1339,6 +1339,30 @@ int main(){
 <img width="293" alt="Screenshot 2022-09-24 203849" src="https://user-images.githubusercontent.com/100711675/192142447-1402f245-f477-4d4d-8b03-df8e522616c4.png">
 
 
+```c++
+// C++ implementation of the approach
+#include <bits/stdc++.h>
+using namespace std;
+
+// Function to return the maximum height
+// which can't be reached
+int maxHeight(int h1, int h2)
+{
+	return ((h1 * h2) - h1 - h2);
+}
+
+// Driver code
+int main()
+{
+	int h1 = 7, h2 = 5;
+
+	cout << max(0, maxHeight(h1, h2));
+
+	return 0;
+}
+
+
+```
 ```
 input:-
 101000011 5
