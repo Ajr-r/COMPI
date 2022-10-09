@@ -4,7 +4,7 @@
 
 !! Trying to erase a element in a array which is for loop it will skip the next element after erasing due to index relocation better to store the wanted value in diff array
 
-!!sometime if the getline() is not working properly use cin.ignore()
+!!sometime if the getline() is not working properly use cin.ignore(), also cin.ignore() sometime remove the first element
 
 !!find function in unordered set is faster than binary search 
 
@@ -17,6 +17,8 @@
 !!In order to reach the conditon limit faster mess with i in condition part in for loop EX: for(int i=0;i*i<=x;i++)
 
 !! for(int i:a) does not work when pasing it a function inside a class
+
+
 
 # To take input separated by comma
 ```c++
