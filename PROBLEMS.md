@@ -1363,6 +1363,13 @@ int main()
 
 
 ```
+
+# infy
+
+<img width="280" alt="Screenshot 2022-09-25 173248" src="https://user-images.githubusercontent.com/100711675/194741662-f6c0f71e-a5bf-4e26-a3ef-acbf2ad8a5ea.png">
+
+
+
 ```
 input:-
 101000011 5
