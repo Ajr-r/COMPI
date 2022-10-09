@@ -82,6 +82,7 @@ string w=to_string(x);//int to string
 	 memset(b,-1,sizeof(b));//only can set 0 or -1 for int array
      bool b[y+1];
 	 memset(b,0,sizeof(b));// can work for char 
+	 //also can be used for matrix
     
 
 ```
