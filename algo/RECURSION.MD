@@ -280,6 +280,7 @@ int main()
 # normal approch
 
 ```c++
+//gives wrong ans for large tc
 #include <bits/stdc++.h>
 # define C cout
 # define l "\n";
@@ -335,7 +336,7 @@ int main()
 ```
 # recursive approach
 ```c++
-
+//TLE should emplement DP
 #include <bits/stdc++.h>
 # define C cout
 # define l "\n";
