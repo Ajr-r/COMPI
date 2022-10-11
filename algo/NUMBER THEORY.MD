@@ -318,3 +318,37 @@ int main()
 
 
 ```
+# finding the power N^R where n is the no and r is the reverse output it by mod
+https://practice.geeksforgeeks.org/problems/power-of-numbers-1587115620/1?page=1&difficulty[]=0&category[]=Divide%20and%20Conquer&sortBy=submissions
+```
+Input:
+N = 2
+Output: 4
+Explanation: The reverse of 2 is 2
+and after raising power of 2 by 2 
+we get 4 which gives remainder as 
+4 by dividing 1000000007.
+
+Input:
+N = 12
+Output: 864354781
+Explanation: The reverse of 12 is 21
+and 1221 , when divided by 1000000007 
+gives remainder as 864354781.
+```
+
+```c++
+    long long power(int N,int R)
+    {
+       //Your code here
+       if(R==0) return 1;//base case
+    
+    long long temp=power(N,R/2)%mod;//recursive call -> it divides the power by 2
+      long long s=(temp*temp)%mod;// when r is even for that loop it return this
+      if(R&1>0)return N*s%mod;//if r is odd multiply s with n to get the odd power equivalent
+      else return s;
+   
+       
+    }
+
+```
