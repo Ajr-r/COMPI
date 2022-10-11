@@ -1486,3 +1486,30 @@ int main()
 	}
 	
 ```
+# to get all substrings
+```c++
+#include<bits/stdc++.h> 
+using namespace std; 
+int distinctSubstring(string str) 
+{ 
+    set<string> res ; 
+    for (int i = 0; i <= str.length(); i++) 
+    { 
+        for (int j = i + 1; j <= str.length(); j++) 
+        { 
+          res.insert(str.substr(i, j)); 
+        } 
+    } 
+    for(auto i:res)cout<<i<<endl;
+  
+    return res.size(); 
+} 
+
+int main() 
+{ 
+    string str;
+    cin>>str;
+    cout << (distinctSubstring(str)); 
+}
+
+```
