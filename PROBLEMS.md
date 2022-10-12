@@ -1513,3 +1513,35 @@ int main()
 }
 
 ```
+#infy efficeint coding
+
+<img width="580" alt="Screenshot 2022-10-12 135653" src="https://user-images.githubusercontent.com/100711675/195291515-a3e2343a-4290-46ea-99c7-71b84c63ce8d.png">
+
+```c++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std; 
+
+int main(){
+    int a[]={3,2,1,2,1,4,5,8,6,7,4,2};
+   unordered_map <int,int>m;
+   int c=-1;   
+   for(int i=0;i<12;i++){
+    if(m.find(a[i])==m.end())m[a[i]]=i;
+    else
+    C<<i<<" "<<m[a[i]]<<l;
+    c=max(c,i-m[a[i]]);
+    //m[a[i]]=i;->this is for when you want to update a new postion 
+    
+    }
+    C<<c<<l
+  
+   
+
+  
+}
+
+```
