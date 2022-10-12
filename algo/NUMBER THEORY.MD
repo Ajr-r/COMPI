@@ -352,3 +352,41 @@ gives remainder as 864354781.
     }
 
 ```
+# finding nth fib adn returning its last number faster
+```
+Input:
+N = 5
+Output:
+5
+Explanation:
+5th Fibonacci number is 5
+
+Input:
+N = 14
+Output:
+7
+Explanation:
+14th Fibonacci number is 377
+It's last digit is 7
+```
+
+```c++
+    int fib(int N){
+        //code here
+        if(N==0)return 0;
+          if(N==1)return 1;
+            if(N==2)return 1;
+        
+        long long i=1;
+       long long j=1;
+        long long t;
+        
+         for(int k=3;k<=N;k++){
+            t=(i+j)%10;
+            i=j;
+            j=t;
+         }
+        return t;
+    }
+
+```
