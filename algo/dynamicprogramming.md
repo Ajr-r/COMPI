@@ -23,6 +23,38 @@ int main()
    
 }
 
+```
+# finding fib with dp// tabulation
+```c++
+
+
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std; 
+const int NE=1e5+2;
+
+
+int main()
+{
+   int n=12;
+   int dp[n+1];
+   dp[0]=0;
+   dp[1]=1;
+   dp[2]=1;
+   for(int i=3;i<=n;i++){
+    dp[i]=dp[i-1]+dp[i-2];
+   }
+C<<dp[n]<<l
+       
+   
+   
+    
+    
+}
+
 
 
 ```
