@@ -105,3 +105,34 @@ Explanation: There is no element that has value 6.
 
 
 ```
+# GFG sliding doors
+given and array and k find the maximum subset with k number of elements
+
+```c++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std; 
+int main()
+{
+    int n=9;
+    int a[] = { 1, 4, 2, 10, 2, 3, 1, 0, 20 };
+    int k = 4;
+    int sum=0;
+    for(int i=0;i<k;i++)sum+=a[i];//adds element till k
+    int msum=-1;
+     for(int i=k;i<n;i++){//adds element for index k as well as removes element from start--the sum of k elemenst move like sliding door
+        sum+=a[i];
+        sum-=a[i-k];
+        msum=max(msum,sum);
+
+     }
+     C<<sum<<l
+ 
+    
+}
+
+
+```
