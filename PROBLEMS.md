@@ -1596,3 +1596,48 @@ int main() {
      }
 }
 ```
+# infy-same like k removals
+
+<img width="454" alt="Screenshot 2022-10-13 120130" src="https://user-images.githubusercontent.com/100711675/195519544-8bc1a4e0-4ba5-4c46-945e-6fa6a8a812fe.png">
+
+<img width="449" alt="Screenshot 2022-10-13 120139" src="https://user-images.githubusercontent.com/100711675/195519553-bbc0a8bf-26c6-401e-8e7d-60431a803c0a.png">
+
+```c++
+
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std; 
+using namespace std;
+
+
+int main() {
+  int n,m;
+  cin>>n;
+  int a[n];
+  map <int,int> ma;
+  for(int i=0;i<n;i++){
+    cin>>a[i];
+    ma[a[i]]++;
+  }
+  cin>>m;
+  vector <int> v;
+  for(auto i:ma){
+    v.push_back(i.second);
+  }
+  sort(v.begin(),v.end());
+  int c=0;
+  for(int i=0;i<v.size();i++){
+    int t=v[i];
+    v[i]-=m;
+    m-=t;
+    if(v[i]>0)c++;
+  }
+  C<<c<<l
+
+
+}
+
+```
