@@ -421,7 +421,7 @@ No messages are sent
     }
 
 ```
-# finding if a number is in the fubnocci series
+# finding if a number is in the fubnocci series in O(1)
 ```c++
 #include <bits/stdc++.h>
 # define C cout
