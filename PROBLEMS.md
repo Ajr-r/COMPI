@@ -1641,3 +1641,41 @@ int main() {
 }
 
 ```
+infy-mountain array
+
+<img width="445" alt="Screenshot 2022-10-13 171623" src="https://user-images.githubusercontent.com/100711675/195588078-c4084c6a-6de4-4fff-8ea9-2b26b4f79237.png">
+
+
+
+<img width="446" alt="Screenshot 2022-10-13 171634" src="https://user-images.githubusercontent.com/100711675/195588119-d84fc366-e711-49e1-96c4-42d55231ed36.png">
+
+
+
+```c++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std; 
+using namespace std;
+
+
+int main() {
+     int n;
+  cin>>n;
+  int a[n];
+    int c=0;
+  for(int i=0;i<n;i++){
+    cin>>a[i];
+  }
+
+    int i=0,j=n-1;
+    while(i<j){
+      if(a[i]!=a[j])c++;
+      i++;
+      j--;
+    }
+    C<<c<<l
+}
+```
