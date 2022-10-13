@@ -1652,6 +1652,7 @@ infy-mountain array
 
 
 ```c++
+60%
 #include <bits/stdc++.h>
 # define C cout
 # define l "\n";
