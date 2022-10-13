@@ -421,3 +421,20 @@ No messages are sent
     }
 
 ```
+# finding if a number is in the fubnocci series
+```c++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std; 
+using namespace std;
+int main() { 
+    int n=377;
+     int x=(5*(n*n))-4;//formula
+     int y=(5*(n*n))+4;//formula
+     if(x==(sqrt(x)*sqrt(x))||y==(sqrt(y)*sqrt(y))) C<<"YES"<<l//checking whether the number obtained is a perfect square or not
+     else C<<"NO"<<l
+}
+```
