@@ -136,3 +136,46 @@ int main()
 
 
 ```
+#GFG Hereos vs villains
+
+
+<img width="449" alt="Screenshot 2022-10-13 111209" src="https://user-images.githubusercontent.com/100711675/195511398-89d1a078-05c7-4b7f-9c1a-7e84837970f8.png">
+
+
+<img width="453" alt="Screenshot 2022-10-13 111223" src="https://user-images.githubusercontent.com/100711675/195511406-9d28dc9d-5d92-4b8e-8fae-17ea8aa6d91f.png">
+
+
+```c++
+
+
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std; 
+using namespace std;
+
+int main() {
+  int nvil,nhero,hh;
+  cin>>nvil>>nhero>>hh;
+  int a[nvil];
+  int vsum=0;
+  for(int i=0;i<nvil;i++){
+    cin>>a[i];
+    vsum+=a[i];
+  }
+  int hsum=nhero*hh;
+  int c=0;
+  for(int i=0;i<nvil;i++){
+      if(vsum<=hsum){
+        break;
+      }
+      vsum-=a[i];
+      c++;
+  }
+ 
+C<<c<<l
+}
+
+```
