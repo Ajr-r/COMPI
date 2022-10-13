@@ -248,3 +248,48 @@ int main(){
 }
 
 ```
+# GFG Jon and Arya are playing a game. Rules of game as follows:
+·  They have a single number N initially.
+·   Both will play an alternate move. Jon starts first.
+·   Both will play each move optimally.
+·   In each move, they can perform only one of these operation
+          1. Divide that number by 2, 3, 4 or 5 and take floor of result.
+          2. Subtract that number by 2, 3, 4 or 5.
+·   If after making a move the number becomes 1, the player who made the move automatically loses the game.
+·   When number becomes zero, the game will stop and the player who can't make a move loses the game.
+```
+Input:
+N = 3
+Output:
+Jon
+Explanation:
+Jon will just subtract 3 from initial
+number and win the game.
+
+Input:
+N = 6
+Output:
+Arya
+Explanation:
+Jon will divide by 3 and then in next step
+Arya will subtract by 2 and win the game.
+```
+```c++
+    string divAndSub(int n) {
+       if(n==1) return "Arya";
+       bool dp[n+1];
+       memset(dp,0,sizeof(dp));
+       dp[0]=0;//if n=0 then its a lossing state
+       for(int i=1;i<=n;i++){
+        for(int j=2;j<=5;j++){
+            if(dp[i/j]==0)dp[i]=1;//checking to c if can reach to loosing state, if you give your opponent a lossing state that means your winning
+            if((i-j)>=0&&dp[i-j]==0)dp[i]=1;//
+
+        }
+       }
+       if(dp[n]==0)return "Arya";
+       return "Jon";
+     
+    }
+
+```
