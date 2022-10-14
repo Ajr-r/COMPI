@@ -293,3 +293,17 @@ Arya will subtract by 2 and win the game.
     }
 
 ```
+
+
+# infy hard(messi game)
+
+<img width="450" alt="Screenshot 2022-10-14 120115" src="https://user-images.githubusercontent.com/100711675/195778810-20101294-5a6a-46c0-b4c9-075fca029e2e.png">
+
+
+<img width="437" alt="Screenshot 2022-10-14 120125" src="https://user-images.githubusercontent.com/100711675/195778832-a32245c2-4106-423a-be2c-a9c3cde9859b.png">
+
+
+```c++
+
+
+```
