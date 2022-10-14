@@ -304,6 +304,31 @@ Arya will subtract by 2 and win the game.
 
 
 ```c++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std; 
+int mod=1000000007;
+ll sum(ll n){
+  return (n*(n+1))/2;
+}
+
+int main() { 
+  int n;
+  cin>>n;
+  int a[n];
+  int b=0;
+  for(int i=0;i<n;i++){
+    cin>>a[i];
+    if(a[i]%2==0&&sum(a[i])%3==0)b++;
+    else if(a[i]%2!=0&&sum(a[i])%3!=0&&a[i]!=1)b++;
+     }
+  C<<b<<l
+}
+
+
 
 
 ```
