@@ -1680,3 +1680,54 @@ int main() {
     C<<c<<l
 }
 ```
+# infy
+
+<img width="453" alt="Screenshot 2022-10-14 105747" src="https://user-images.githubusercontent.com/100711675/195769180-9dd7da6d-86e9-44b6-a791-4e79b4628940.png">
+
+
+<img width="446" alt="Screenshot 2022-10-14 105801" src="https://user-images.githubusercontent.com/100711675/195769190-3a16e5e0-8876-4b4d-80e6-48b388073a65.png">
+
+
+<img width="441" alt="Screenshot 2022-10-14 105816" src="https://user-images.githubusercontent.com/100711675/195769197-977ff373-dbf7-44fa-a3be-4d3cccff1321.png">
+
+```c++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std; 
+
+int main() { 
+  int ax,mx;
+  string s;
+  cin>>ax;
+  int an[ax];
+  for(int i=0;i<ax;i++)cin>>an[i];
+   cin>>mx;
+  int ma[mx];
+  for(int i=0;i<mx;i++)cin>>ma[i];
+  cin>>s;  
+     int ansum=0;
+      int marsum=0;
+  if(s=="Even"){
+      for(int i=0;i<mx;i++){
+          if(i%2==0){
+            ansum+=an[i]-ma[i];
+            marsum+=ma[i]-an[i];
+          }
+      }
+    }else{       
+      for(int i=0;i<mx;i++){
+          if(i%2!=0){
+            ansum+=an[i]-ma[i];
+            marsum+=ma[i]-an[i];
+          }
+    }
+}
+    if(ansum==marsum)C<<"Tie"<<l
+else if(ansum>marsum)C<<"Andrea"<<l
+else C<<"Maria"<<l
+} 
+
+```
