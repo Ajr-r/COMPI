@@ -435,6 +435,68 @@ int main() {
      int x=(5*(n*n))-4;//formula
      int y=(5*(n*n))+4;//formula
      if(x==(sqrt(x)*sqrt(x))||y==(sqrt(y)*sqrt(y))) C<<"YES"<<l//checking whether the number obtained is a perfect square or not
-     else C<<"NO"<<l
+     else C<<"NO"<<l<img width="587" alt="Screenshot 2022-10-14 135457" src="https://user-images.githubusercontent.com/100711675/195799868-f8e22152-a7c5-4851-b42c-15e3ce64e5ae.png">
+
 }
 ```
+
+
+# infy
+<img width="587" alt="Screenshot 2022-10-14 135457" src="https://user-images.githubusercontent.com/100711675/195799996-a8c6a5c1-1c34-42ec-b1e4-36c9223b714a.png">
+
+
+
+
+<img width="591" alt="Screenshot 2022-10-14 135505" src="https://user-images.githubusercontent.com/100711675/195799887-747a9322-5d5d-476c-bf4c-8d27c9167c3d.png">
+
+```c++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std; 
+int mod=1000000007;
+
+ll solve(ll n,ll a,ll b,ll c,ll d){
+  ll ans=0;
+  if(n==0)return 4;
+   ll temp1;
+  ll temp2;
+  while(n>0){
+    if(n%2==0){
+      ans=((a+c)%mod+(b+d)%mod+a%mod+b%mod)%mod;
+     
+       temp1=a%mod;
+       temp2=b%mod;
+      a=(a+c)%mod;
+      b=(b+d)%mod;
+      c=temp1%mod;
+      d=temp2%mod;       
+    }
+    else{
+        ans=((a+b)%mod+(c+d)%mod+a%mod+c%mod)%mod;
+     
+       temp1=a%mod;
+       temp2=c%mod;
+      a=(a+b)%mod;
+      c=(c+d)%mod;
+      b=temp1%mod;
+      d=temp2%mod;
+
+    }
+    n--;
+  }
+  return ans;
+}
+int main() { 
+  ll n;
+  cin>>n;
+    if(n>=0)C<<solve(n,1,1,1,1)<<l 
+    else C<<"-1"<<l
+}
+
+
+
+```
+
