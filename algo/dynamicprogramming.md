@@ -182,7 +182,7 @@ vector <int> dp(NE,-1);
       int ans=INT_MAX;
       for(int i:coins){
         if(amount-i>=0){
-          ans=min(ans+0ll,cc(coins,amount-i)+1ll);
+          ans=min(ans+0ll,cc(coins,amount-i)+1ll);//adding long long to avoid int overflow
 
         }
       }
