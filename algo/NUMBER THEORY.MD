@@ -529,4 +529,30 @@ int main()
 }
 
 ```
+#codchef
 
+<img width="364" alt="Screenshot 2022-10-15 144703" src="https://user-images.githubusercontent.com/100711675/195978927-5c24f8a9-4121-4f2a-88a9-a20b82ef6443.png">
+
+<img width="361" alt="Screenshot 2022-10-15 144711" src="https://user-images.githubusercontent.com/100711675/195978928-935dc727-3197-4738-996f-e2269908fffd.png">
+
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    int x,y;
+	    cin>>x>>y;
+	    if(x==1||y==1)cout<<"NO"<<endl;
+        else if(x%2==0&&y%2==0)cout<<"YES"<<endl;
+	    else  if(x%2==0&&y%2!=0||x%2!=0&&y%2==0)cout<<"YES"<<endl;
+	    else   cout<<"NO"<<endl;
+	}
+	return 0;
+}
+
+````
