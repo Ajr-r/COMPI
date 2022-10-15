@@ -117,4 +117,88 @@ int main()
 
 
 ```
+#LIS 
 
+<img width="465" alt="Screenshot 2022-10-15 201801" src="https://user-images.githubusercontent.com/100711675/195992710-ca90389b-c94a-4321-9468-35b7809587fa.png">
+
+
+```c++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std; 
+const int NE=1e5+2;
+vector <int> dp(NE,-1);
+vector <int> v;
+int lis(int n){
+  if(dp[n]!=-1)return dp[n];
+  int ans=1;
+  for(int i=0;i<n;i++){//iterates from 0 to n on the array if a[i] is smaller than a[n] it will search for next smaller than a[i]
+    if(v[i]<v[n]){
+      ans=max(ans,lis(i)+1);
+    }
+  }
+  dp[n]=ans;
+  return dp[n];
+}
+int main() {
+	// your code goes here
+  int n;
+  cin>>n;
+  for(int i=0;i<n;i++){
+    int y;
+    cin>>y;
+    v.push_back(y);
+  }
+    int m=0;
+  for(int i=0;i<n;i++){
+    m=max(m,lis(i));
+
+  }
+  C<<m<<l
+
+   
+}
+
+```
+# coin change
+
+<img width="474" alt="Screenshot 2022-10-15 222804" src="https://user-images.githubusercontent.com/100711675/195998739-1c8974a5-f228-4cf1-9736-dce70dbb270e.png">
+
+```c++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+using namespace std; 
+const int NE=1e5+2;//dont use this in leet code or inside class instead use dp array
+vector <int> dp(NE,-1);
+    int cc(vector<int>& coins, int amount) {
+  
+  if(dp[amount]!=-1)return dp[amount];
+      if(amount==0)return 0;
+      int ans=INT_MAX;
+      for(int i:coins){
+        if(amount-i>=0){
+          ans=min(ans+0ll,cc(coins,amount-i)+1ll);
+
+        }
+      }
+      dp[amount]=ans;
+     return dp[amount];
+    }
+     int coinChange(vector<int>& coins, int amount) {
+      int c=cc(coins,amount);
+      if(c==INT_MAX)return -1;
+      else return c;
+        
+    }
+int main() {
+	// your code goes here
+  vector <int> v={2};
+  C<<coinChange(v,3)<<l
+}
+
+```
