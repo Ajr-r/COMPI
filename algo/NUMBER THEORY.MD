@@ -589,3 +589,26 @@ int main() {
 	return 0;
 }
 ```
+# codeforces
+
+<img width="479" alt="Screenshot 2022-10-15 191014" src="https://user-images.githubusercontent.com/100711675/195989550-749d7b87-a337-468b-85e1-ca1c06f5fd64.png">
+
+
+```c++
+
+
+#include <bits/stdc++.h>
+using namespace std;
+# define C cout
+# define l "\n";
+ 
+int main()
+{
+    long long n;
+    cin >> n;
+    if(n%2==0)C<<n/2<<l
+    else C<<((n+1)/2)*-1<<l
+ 
+  
+
+```
