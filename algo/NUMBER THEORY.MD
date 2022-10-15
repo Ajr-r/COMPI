@@ -499,4 +499,34 @@ int main() {
 
 
 ```
+# codechef
+
+<img width="362" alt="Screenshot 2022-10-15 143448" src="https://user-images.githubusercontent.com/100711675/195978512-0b5efdf0-5db9-464e-bf9e-65569c0c8892.png">
+
+<img width="364" alt="Screenshot 2022-10-15 143457" src="https://user-images.githubusercontent.com/100711675/195978514-d1fa1d6d-0569-4132-b66b-6df63e7ae2cd.png">
+
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+void solve(){
+float x;
+cin>>x;
+C<<x-1<<l
+   
+}
+
+int main()
+{   int t=1;
+  
+    while(t--){
+        solve();
+    }
+
+}
+
+```
 
