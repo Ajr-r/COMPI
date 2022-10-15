@@ -556,3 +556,36 @@ int main() {
 }
 
 ````
+#codechef
+
+<img width="363" alt="Screenshot 2022-10-15 150306" src="https://user-images.githubusercontent.com/100711675/195979499-ba6ab1cc-fe8c-49a8-b9f1-ac3684bea88a.png">
+
+
+
+<img width="359" alt="Screenshot 2022-10-15 150313" src="https://user-images.githubusercontent.com/100711675/195979501-dd7a24cf-7472-409d-8aa7-e449a2d3915f.png">
+
+
+```c++
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long 
+const int NE=1e5+2;
+int dp[NE];
+int main() {
+	// your code goes here
+	ll t;
+	cin>>t;
+	while(t--){
+    int x,y,z;
+    cin>>x>>y>>z;
+    if(x-y==0)cout<<"YES"<<endl;
+    else if(abs(x-y)%z==0&&(abs(x-y)/z)%2==0)cout<<"YES"<<endl;
+    else cout<<"NO"<<endl;
+   
+
+	
+	}
+	return 0;
+}
+```
