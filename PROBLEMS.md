@@ -486,7 +486,45 @@ int main()
    }
     }
 }
+-------------------------------------------------------------------------------------
+//0(n)
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+using namespace std; 
+const int NE=1e5+2;
+int solve(vector <int> v,int sum){
+    if(sum-v[0]==0)return 0;
+    if(sum-v[v. size() -1]==0)return v. size() -1;
+    
+    int left=v[0];
+    int rems=sum-left;
+    for(int i=1;i<v.size();i++){
+        rems-=v[i];
+        if(left==rems)return i;
+        left+=v[i];
+    }
+    return -1;
+}
 
+int main() {
+    vector <int> v;
+    string s;
+    getline(cin,s);
+    stringstream ss(s);
+    string sub;
+    while(ss. good() ){
+        getline(ss,sub,',');
+        v. push_back(stoi(sub));    
+    }
+    int sum=0;
+    for(int i=0;i<v. size() ;i++){
+        sum+=v[i];
+    }
+    C<<solve(v,sum)<<l 
+      
+}
 ```
 # Sum of subarrays
 ```c++
