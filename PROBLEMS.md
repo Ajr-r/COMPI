@@ -1208,6 +1208,12 @@ int main()
 4 3
 6 12 18 24
 
+output:-
+NO
+yes
+yes
+no
+
 ```
 
 ```c++
