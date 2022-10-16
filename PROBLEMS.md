@@ -1596,49 +1596,38 @@ int main(){
 <img width="284" alt="Screenshot 2022-10-12 182953" src="https://user-images.githubusercontent.com/100711675/195349279-e822f619-67e0-4661-a48c-13b619509d96.png">
 
 ```c++
-TC->90%
 #include <bits/stdc++.h>
 # define C cout
 # define l "\n";
 #define ll long long 
 #define ld long double 
 using namespace std; 
-using namespace std;
-int isprime(int n){
-    for(int i=2;i*i<=n;i++){
-        if(n%i==0)return 0;
-    }
-         return 1;
-}
+const int NE=1e5+2;
 
 int main() {
-    string s;
+  string s;
     cin>>s;
+    int n=s.size() ;
    
-    
-    if((isprime(s.size())&&s.size()>2)||s.size()==1)cout<<s.size()<<endl;//prime number cant be equally divided
-     else{
-        set <int> se;
         unordered_map <char,int> m;
-        for(char i:s){
-            m[i]++;
-        }
-        for(auto i:m){
-            se. insert(i.second);
-        }  
-        int e=*se.begin();       
-       int f=1;
-        for(auto i:se){//if the smallest number is divisible by all then there can be e equal strings
-        
-            if((i%e)!=0){
+        for(char i:s)m[i]++;
+        set <int> se;
+        for( auto i:m)se. insert(i. second);
+        int f=1;
+        int y=*se. begin() ;
+        for( auto i:se){
+            if(i%y!=0){
+                cout<<1<<endl;
                 f=0;
-                C<<1<<l
                 break;
             }
         }
-        if(f)C<<e<<l
-     }
+        if(f)C<<y<<l
+    
+    
 }
+
+ 
 ```
 # infy-same like k removals
 
