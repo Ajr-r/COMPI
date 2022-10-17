@@ -202,3 +202,68 @@ int main() {
 }
 
 ```
+
+# knapsack dp
+
+<img width="575" alt="Screenshot 2022-10-17 120359" src="https://user-images.githubusercontent.com/100711675/196105288-cf315446-1416-4986-bc01-334dc582265e.png">
+
+https://atcoder.jp/contests/dp/tasks/dp_d
+```
+3 8
+3 30
+4 50
+5 60
+o->90
+
+5 5
+1 1000000000
+1 1000000000
+1 1000000000
+1 1000000000
+1 1000000000
+0->5000000000
+
+6 15
+6 5
+5 6
+6 4
+6 6
+3 5
+7 2
+0->17
+
+```
+```c++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std;
+const int NE=1e5+10;
+int a[NE];
+ll dp[105][100005];
+ll knap(ll v[],ll wt[],ll n,ll w){
+  if(dp[n][w]!=-1)return dp[n][w];
+  if(n==0)return 0;
+  if(w-wt[n-1]<0)return knap(v,wt,n-1,w);
+  ll ans=max(knap(v,wt,n-1,w),knap(v,wt,n-1,w-wt[n-1])+v[n-1]);
+  dp[n][w]=ans;
+  return dp[n][w];
+}
+int main(){
+  memset(dp,-1,sizeof(dp));
+  ll n,w;
+  cin>>n>>w;
+  ll v[n];
+  ll wt[n];
+  for(ll i=0;i<n;i++){
+    cin>>wt[i];
+    cin>>v[i];
+
+  }
+  C<<knap(v,wt,n,w);
+ 
+}
+
+```
