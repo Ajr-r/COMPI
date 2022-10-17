@@ -612,3 +612,21 @@ int main()
   
 
 ```
+# infy chem
+
+<img width="454" alt="Screenshot 2022-10-17 173022" src="https://user-images.githubusercontent.com/100711675/196172186-8edf0d0e-ee51-421d-a452-64e4eb38d052.png">
+
+
+<img width="442" alt="Screenshot 2022-10-17 173031" src="https://user-images.githubusercontent.com/100711675/196172202-83ee05fe-4c0b-40e1-ba39-5be5f5ecde81.png">
+
+```c++
+int samChemicals(vector<int> phValue){
+    sort(phValue.begin(),phValue.end());
+    int sum=1;
+    for(int i:phValue){
+        if(i<=sum)sum+=i;  
+    }
+    return sum;
+}
+
+```
