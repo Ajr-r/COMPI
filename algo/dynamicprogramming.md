@@ -267,3 +267,52 @@ int main(){
 }
 
 ```
+# rod cutting
+Given a rod of length N inches and an array of prices, price[]. pricei denotes the value of a piece of length i. Determine the maximum value obtainable by cutting up the rod and selling the pieces.
+https://practice.geeksforgeeks.org/problems/rod-cutting0840/1
+```
+Input:
+N = 8
+Price[] = {1, 5, 8, 9, 10, 17, 17, 20}
+Output:
+22
+Explanation:
+The maximum obtainable value is 22 by
+cutting in two pieces of lengths 2 and 
+6, i.e., 5+17=22.
+
+Input:
+N=8
+Price[] = {3, 5, 8, 9, 10, 17, 17, 20}
+Output: 24
+Explanation: 
+The maximum obtainable value is 
+24 by cutting the rod into 8 pieces 
+of length 1, i.e, 8*3=24. 
+```
+```c++
+int dp[1005];
+class Solution{
+  public:
+    int func(int len,int n,int price[]){
+        if(dp[len]!=-1)return dp[len];
+        if(len==0)return 0;
+        int ans=0;
+        for(int i=0;i<n;i++){
+            if(len-(i+1)>=0){
+                ans=max(ans,func(len-(i+1),n,price)+price[i]);
+            }
+        }
+        return dp[len]=ans;
+        
+    }
+    int cutRod(int price[], int n) {
+        //code here
+        memset(dp,-1,sizeof(dp));
+        return func(n,n,price);
+     
+        
+    }
+};
+
+```
