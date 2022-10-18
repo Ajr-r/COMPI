@@ -82,3 +82,67 @@ int main() {
 
 
 ```
+#infy forest
+
+<img width="579" alt="Screenshot 2022-10-18 194710" src="https://user-images.githubusercontent.com/100711675/196456351-c7d3c4b8-0bdf-4ece-b473-89f13cd5c9e6.png">
+
+<img width="627" alt="Screenshot 2022-10-18 194724" src="https://user-images.githubusercontent.com/100711675/196456409-f99c0a0d-2b2a-4870-906c-102db64d9848.png">
+
+```
+
+5
+T T T W W
+T W W T T
+T W W T T
+T W T T T
+W W T T T
+
+o->10
+```
+```c++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std;
+const int NE=10000;
+char a[NE][NE];
+int ci=0;
+int herd(int i,int j,int n,int ans){
+    if(i<0||j<0)return 0;
+    if(i>=n||j>=n||a[i][j]=='W'||a[i][j]=='Q')return 0;
+    ci++; 
+    a[i][j]='Q';
+    herd(i+1,j,n,ans);    
+    herd(i,j+1,n,ans);
+    herd(i-1,j,n,ans);
+    herd(i,j-1,n,ans);
+    return ans;
+}
+int main() {
+    int n;
+    cin>>n;
+    int count=0;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            cin>>a[i][j];
+    }
+    }
+    int ans=-1;
+      for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+           herd(i,j,n,0);
+           ans=max(ans,ci);
+           ci=0;
+    }
+    }
+     if(ans)C<<ans<<l
+     else C<<-1<<l   
+}
+
+
+```
+
+
+
