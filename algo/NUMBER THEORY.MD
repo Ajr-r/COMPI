@@ -630,3 +630,73 @@ int samChemicals(vector<int> phValue){
 }
 
 ```
+# hackwithinfy
+
+Paper Sheets 
+Sam is handed a rectangular piece of paper with the dimensions h*w, where h denotes height and w denotes width. Sam wants to fold the paper in the fewest possible moves such that its dimensions are h1*w1. The paper could only be folded parallel towards its edges, and the dimensions should be integers after folding. If h=8 and w=4, for example, fold the paper till it's h1, w1 = 6,1. First, fold the long edge 6 units to the side, resulting in a 6*4 paper. And then, Fold the page in three folds along the width 2 units edge to achieve a 6*1 page.
+
+Input Format
+
+First line contains an integer denotes h 
+
+Seconds line contains an integer denotes w 
+
+Third line contains an integer denotes h1
+
+Fourth line contains an integer denotes w1
+
+Constraints
+
+1 <= h, w, h1, w1 <= 10^15
+
+h1 <= h
+
+w1 <= w
+
+Output Format
+
+Print the minimum moves required.
+
+Sample Input:
+```
+2
+
+3
+
+2
+
+2
+
+0->1
+
+```
+```c++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std;
+int main() {
+    int h,w,h1,w1;
+    cin>>h>>w>>h1>>w1;
+    int moves=0;
+    while(w>w1){
+        moves++;
+        if(w&1>0){
+            w=(w+1)/2;
+        }
+        else w=w/2;
+    }
+    while(h>h1){
+        moves++;
+        if(h&1>0){
+            h=(h+1)/2;
+        }
+        else h=h/2;
+    }
+    C<<moves<<l
+}
+
+
+```
