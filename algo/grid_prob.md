@@ -1,10 +1,9 @@
 # infy hard- sheep
+<img width="443" alt="Screenshot 2022-10-18 190300" src="https://user-images.githubusercontent.com/100711675/196445000-459429b4-6847-4954-a37a-4214ab00e31d.png">
 
-<img width="465" alt="Screenshot 2022-10-15 201801" src="https://user-images.githubusercontent.com/100711675/196444401-7e27bb8a-cd61-49b3-a50d-f342b53e2362.png">
+<img width="445" alt="Screenshot 2022-10-18 190310" src="https://user-images.githubusercontent.com/100711675/196445031-0a9756f8-26b3-44fc-9074-ba6448a33783.png">
 
-<img width="474" alt="Screenshot 2022-10-15 222804" src="https://user-images.githubusercontent.com/100711675/196444414-6819c7b1-a90a-4e52-82a0-f647c20208dd.png">
-
-<img width="575" alt="Screenshot 2022-10-17 120359" src="https://user-images.githubusercontent.com/100711675/196444425-ccf41eab-a336-4ea9-b0ea-9da0618ad538.png">
+<img width="453" alt="Screenshot 2022-10-18 190320" src="https://user-images.githubusercontent.com/100711675/196445053-e0a0003c-0600-4ec8-b9e7-9595c92b147a.png">
 
 ```
 1
