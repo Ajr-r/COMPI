@@ -1777,36 +1777,34 @@ else C<<"Maria"<<l
 # define l "\n";
 #define ll long long 
 #define ld long double 
+
 using namespace std;
+bool is(int n){
+    string s=to_string(n);
+    int fh=0,sh=0;
+    for(int i=0;i<s. size()/2;i++)fh+='0'+(int)s[i];
+    for(int i=s. size()/2;i<s.size();i++)sh+='0'+(int)s[i];
+    if(sh==fh)return 1;
+    return 0;
+}
 
 int main() {
-    int sum=0;
-    int n;
-    cin>>n;
-    int x;
-    cin>>x;
-    int a[n];
-    for(int j=0;j<n;j++)cin>>a[j];
-    int m=-1;
-    int y;
-
-    for(int j=0;j<=x;j++){
-
-        for(int i:a){
-            sum+=j^i;
+int t;
+    cin>>t;
+    while(t--){
+        int r,le;
+        int c=0;
+        cin>>r>>le;
+        for(int i=r;i<=le;i++){
+            if((to_string(i).size()&1)>0){
+                i*=10;
+                 continue;
+            }
+            if(is(i))c++;
         }
- 
-        if(sum>m){
-            m=sum;
-            y=j;
-        }
-        sum=0;
+        C<<c<<l
     }
-   int os=0;
-   for(int i:a)os+=y|i;
    
-   if(m==os)C<<"Yes"<<l
-   else C<<"No"<<l
 }
 
 ```
