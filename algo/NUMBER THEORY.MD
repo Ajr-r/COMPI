@@ -700,3 +700,54 @@ int main() {
 
 
 ```
+# infy playstation
+
+<img width="628" alt="Screenshot 2022-10-19 120755" src="https://user-images.githubusercontent.com/100711675/196615438-80f252ba-2b76-470d-b746-0fd0a7e9f3ec.png">
+
+
+<img width="626" alt="Screenshot 2022-10-19 120813" src="https://user-images.githubusercontent.com/100711675/196615444-a43092c5-72d3-44f7-8b81-ae7399f09244.png">
+
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+double maxProb(int x,int y,int n,int w,double p1,double p2,vector< vector<double>>&dp)
+{
+if(w<=0)
+{
+return 1.0;
+}
+if(n==0&& w>0)
+{
+return 0.0;
+}
+if(dp[n][w]!=-1.0)
+{
+return dp[n][w];
+}
+double ans1=(maxProb(x,y,n-1,w-x,p1,p2,dp)*p1)+((1.0-p1)*maxProb(x,y,n-1,w,p1,p2,dp));
+ans1=max(ans1,(maxProb(x,y,n-1,w-y,p1,p2,dp)*p2)+((1.0-p2)*maxProb(x,y,n-1,w,p1,p2,dp)));
+
+
+dp[n][w] =ans1;
+return dp[n][w];
+}
+int main()
+{
+int t;
+cin>>t;
+while(t--)
+{
+int x,y,n,w,prod1,prod2;
+cin>>x>>y>>n>>w>>prod1>>prod2;
+double p1=0.01*prod1;
+double p2=0.01*prod2;
+vector<vector<double>> dp(n+1,vector<double>(w+1,-1.0));
+double ans=maxProb(x,y,n,w,p1,p2,dp);
+ans*=100;
+cout<<fixed<<setprecision(6)<<ans<<endl;
+}
+
+}
+```
