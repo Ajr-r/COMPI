@@ -107,3 +107,50 @@ int main(){
 
 }
 ```
+#infy 
+
+
+<img width="635" alt="Screenshot 2022-10-19 200043" src="https://user-images.githubusercontent.com/100711675/196720588-2e96ee3d-1616-4476-b06c-d886bea52c07.png">
+
+
+<img width="633" alt="Screenshot 2022-10-19 200055" src="https://user-images.githubusercontent.com/100711675/196720601-b7a6b027-7e09-4ba4-bda9-bfca3c1caedc.png">
+
+```c++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std;
+
+int main() {
+    int sum=0;
+    int n;
+    cin>>n;
+    int x;
+    cin>>x;
+    int a[n];
+    for(int j=0;j<n;j++)cin>>a[j];
+    int m=-1;
+    int y;
+
+    for(int j=0;j<=x;j++){
+
+        for(int i:a){
+            sum+=j^i;
+        }
+ 
+        if(sum>m){
+            m=sum;
+            y=j;
+        }
+        sum=0;
+    }
+   int os=0;
+   for(int i:a)os+=y|i;
+   
+   if(m==os)C<<"Yes"<<l
+   else C<<"No"<<l
+}
+
+```
