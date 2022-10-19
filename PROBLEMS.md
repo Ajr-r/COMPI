@@ -1764,3 +1764,50 @@ else C<<"Maria"<<l
 } 
 
 ```
+# infy
+
+<img width="466" alt="Screenshot 2022-10-19 221018" src="https://user-images.githubusercontent.com/100711675/196752580-46f3d32a-c45f-4b76-a92d-34085b37f6f9.png">
+
+
+<img width="462" alt="Screenshot 2022-10-19 221026" src="https://user-images.githubusercontent.com/100711675/196752601-00531e10-7764-4071-b590-c8e400b0ace9.png">
+
+```c++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std;
+
+int main() {
+    int sum=0;
+    int n;
+    cin>>n;
+    int x;
+    cin>>x;
+    int a[n];
+    for(int j=0;j<n;j++)cin>>a[j];
+    int m=-1;
+    int y;
+
+    for(int j=0;j<=x;j++){
+
+        for(int i:a){
+            sum+=j^i;
+        }
+ 
+        if(sum>m){
+            m=sum;
+            y=j;
+        }
+        sum=0;
+    }
+   int os=0;
+   for(int i:a)os+=y|i;
+   
+   if(m==os)C<<"Yes"<<l
+   else C<<"No"<<l
+}
+
+```
+
