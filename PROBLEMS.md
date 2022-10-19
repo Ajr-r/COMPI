@@ -1808,4 +1808,59 @@ int t;
 }
 
 ```
+#infy 
+
+<img width="467" alt="Screenshot 2022-10-19 232309" src="https://user-images.githubusercontent.com/100711675/196768085-37d864a1-49d5-4e59-a983-e1855423b13f.png">
+
+
+<img width="467" alt="Screenshot 2022-10-19 232320" src="https://user-images.githubusercontent.com/100711675/196768106-82f3eaca-0e75-4202-8862-e9d1c24143cf.png">
+
+```c++
+#include <bits/stdc++.h>
+# define C cout
+# define l "\n";
+#define ll long long 
+#define ld long double 
+using namespace std;
+
+int main() {
+    int k;
+    int t;
+    string s;
+    cin>>k>>t>>s;
+    vector <int> v;
+    stringstream ss(s);   
+    string sub;
+    set <int> set;
+    while(ss. good() ){
+        getline(ss,sub,',');
+        v. push_back(stoi(sub));
+    }
+    map <int,int> m;
+    for(int i:v){
+        if(m.find(abs(i-t))!=m.end()){
+             continue;
+        }
+        m[abs(i-t)]=i;
+    }
+    int c=0;
+ for(auto i:m){
+     c++;
+     if(c<=k)set.insert(i. second);
+     
+ }  
+string res="[";    
+    for(int i:set){
+        res+=to_string(i);
+        res+=", ";
+    }
+    res.pop_back();
+     res.pop_back();
+    res+=']';
+    C<<res<<l
+}
+
+
+
+```
 
