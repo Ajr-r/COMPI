@@ -391,13 +391,26 @@ int main()
     reverse(s.begin(),s.end());//should reverse the order
     cout<<s<<endl;
     int y=0;
-    for(int i=0;i<s.size();i++){//converting from binary to decimal base 10
+    for(int i=0;i<s.size();i++){//converting from binary to decimal base 10//wrong
         if(s[i]=='1'){
             y+=pow(2,i);
         }
     }
     cout<<y;
 }
+---------------------------------------------------
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	char binaryNumber[] = "1001";
+	
+	cout << stoi(binaryNumber, 0, 2);
+
+	return 0;
+}
+// This code is contributed by whysodarkbro
 
 ```
 # INFY ASS 1
