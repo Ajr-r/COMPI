@@ -27,6 +27,17 @@ if(f) C<<"YES"<<l
 }
 
 ```
+# array
+```
+array = [1,2,3,4]
+
+Subarray : [1,2],[1,2,3] - is continous and maintains relative order of elements
+
+Subsequence: [1,2,4] - is not continous but maintains relative order of elements
+
+Subset: [1,3,2] - is not continous and does not maintain relative order of elements
+
+```
 # Y-shape pattern
 ```c++
 #include <bits/stdc++.h>
