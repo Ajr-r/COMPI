@@ -179,3 +179,40 @@ C<<c<<l
 }
 
 ```
+GFG-Meduim
+Given an array A[] and positive integer K, the task is to count total number of pairs in the array whose sum is divisible by K.
+```
+Input : 
+A[] = {2, 2, 1, 7, 5, 3}, K = 4
+Output : 5
+Explanation : 
+There are five pairs possible whose sum
+is divisible by '4' i.e., (2, 2), 
+(1, 7), (7, 5), (1, 3) and (5, 3)
+
+Input : 
+A[] = {5, 9, 36, 74, 52, 31, 42}, K = 3
+Output : 7 
+Explanation : 
+There are seven pairs whose sum is divisible by 3, 
+i.e, (9, 36), (9,42), (74, 52), (36, 42), (74, 31), 
+(31, 5) and (5, 52
+
+```
+```c++
+    long long countKdivPairs(int a[], int n, int k)
+    {
+        //code here
+        long long ans=0;
+        map <int,int> m;
+        for(int i=0;i<n;i++){
+            int r=a[i]%k;
+            if(r!=0)
+            ans+=m[k-r];
+            else ans+=m[0];
+            m[r]++;
+            
+        }
+        return ans;
+    }
+```
