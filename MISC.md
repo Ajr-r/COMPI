@@ -130,3 +130,7 @@ int n=5;//use int** a as formal parameters in a function
     } 
 
 ```
+# datastructure conversion
+```c++
+ set <int,greater<int>> s(arr,arr+n);//can use it for other data as well but 2 DS should have the same datatype
+```
