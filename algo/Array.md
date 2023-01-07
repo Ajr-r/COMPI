@@ -199,3 +199,50 @@ Output:
         return m+1;
     }
 ```
+# GFG type of array-basic
+```
+You are given an array of size N having no duplicate elements. The array can be categorized into the following:
+1.  Ascending
+2.  Descending
+3.  Descending Rotated
+4.  Ascending Rotated
+Your task is to return which type of array it is and the maximum element of that array.
+Input :
+N = 5 
+A[] = { 2, 1, 5, 4, 3}
+Output :
+5 3
+Explanation:
+Descending rotated with maximum
+element 5 
+Input :
+N = 5
+A[] = { 3, 4, 5, 1, 2}
+Output : 
+5 4
+Explanation:
+Ascending rotated with maximum element 5 
+
+```
+```c++
+    pair<long long, int> maxNtype(long long a[], long long n)
+    {
+        //code here.
+      int inc=0,dec=0;
+      int j=1;
+      int m=*max_element(a,a+n);
+      for(int i=0;i<n;i++){
+         if(j==n)break;
+         if(a[j]>a[i])inc++;
+         else dec++;
+         j++;
+      }
+      if(inc==0||dec==0){
+          if(inc==0) return {m,2};
+          else return {m,1};
+      }
+      if(inc>dec)return {m,4};
+      else return {m,3};
+    }
+
+```
