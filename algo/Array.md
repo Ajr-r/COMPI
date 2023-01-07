@@ -161,3 +161,41 @@ Output: 3
    return A[5];
 
 ```
+# GFG longest incresing subarray
+```
+Given an array containing n numbers. The problem is to find the length of the longest contiguous subarray such that every element in the subarray is strictly greater than its previous element in the same subarray.'
+
+Input:
+n = 9
+a[] = {5, 6, 3, 5, 7, 8, 9, 1, 2}
+Output:
+5
+
+Input:
+n = 10
+a[] = {12, 13, 1, 5, 4, 7, 8, 10, 10, 11}
+Output:
+4
+
+```
+```c++
+  long int lenOfLongIncSubArr(long int a[], long int n) {
+        if(n==1)return 1;
+       int c=0;
+        int j=1;
+        int m=INT_MIN;
+        for(int i=0;i<n;i++){
+            if(j==n)break;
+            if(a[j]>a[i]){
+                c++;
+                m=max(m,c);
+            }
+            else{
+                c=0;
+            }
+            j++;
+        }
+        if(m==INT_MIN)return 1;
+        return m+1;
+    }
+```
