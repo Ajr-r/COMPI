@@ -155,3 +155,26 @@ for(it=s.begin();it!=s.end();it++){
 }
 
 ```
+# STACK
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+   stack <int> stk;
+   for(int i=0;i<5;i++){
+    stk.push(i);
+
+   }
+  while(!stk.empty()){
+    cout<<stk.top()<<endl;
+    stk.pop();
+  }
+  cout<<stk.size()<<endl;
+  cout<<stk.empty()<<endl;
+      // using swap() function to swap elements of stacks
+    // mystack1.swap(mystack2);
+
+  
+}
+```
