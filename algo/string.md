@@ -205,3 +205,41 @@ int main(){
 }
 
 ```
+# GFG Maximum Occuring Character
+```
+Given a string str. The task is to find the maximum occurring character in the string str. If more than one character occurs the maximum number of time then print the lexicographically smaller character.
+
+Input:
+str = testsample
+Output: e
+Explanation: e is the character which
+is having the highest frequency.
+
+Input:
+str = output
+Output: t
+Explanation:  t and u are the characters
+with the same frequency, but t is
+lexicographically smaller.
+```
+```c++
+    char getMaxOccuringChar(string str)
+    {
+        // Your code here
+        map <char,int>m;
+        set <char> s;
+        int mx=INT_MIN;
+        for(int i=0;i<str.size();i++){
+            m[str[i]]++;
+            mx=max(mx,m[str[i]]);
+            
+        }
+          for(int i=0;i<str.size();i++){
+            if(m[str[i]]==mx)s.insert(str[i]);
+            
+            
+        }
+        return *s.begin();
+       
+    }
+```
