@@ -243,3 +243,45 @@ lexicographically smaller.
        
     }
 ```
+# GFG check is string is rotated
+```
+Given two strings s1 and s2. The task is to check if s2 is a rotated version of the string s1. The characters in the strings are in lowercase.
+
+Input:
+geeksforgeeks
+forgeeksgeeks
+Output: 
+1
+Explanation: s1 is geeksforgeeks, s2 is
+forgeeksgeeks. Clearly, s2 is a rotated
+version of s1 as s2 can be obtained by
+left-rotating s1 by 5 units.
+
+Input:
+mightandmagic
+andmagicmigth
+Output: 
+0
+Explanation: Here with any amount of
+rotation s2 can't be obtained by s1.
+
+
+```
+```c++
+    bool areRotations(string s1,string s2)
+    {
+        if(s1.length()!=s2.length())
+            return false;
+        else
+        {
+            //we concatenate first string to itself and check if other 
+            //string occurs in it as substring. If yes, then it 
+            //is rotated version and we return true else false.
+            string concated=s1+s1;
+            if(concated.find(s2)!=string::npos)
+                return true;
+            else
+                return false;
+        }
+    }
+```
