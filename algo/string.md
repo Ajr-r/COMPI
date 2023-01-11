@@ -285,3 +285,73 @@ rotation s2 can't be obtained by s1.
         }
     }
 ```
+# GFG reversing the vowels (school)
+```
+Given a string consisting of lowercase english alphabets, reverse only the vowels present in it and print the resulting string.
+
+Input:
+S = "geeksforgeeks"
+Output: geeksforgeeks
+Explanation: The vowels are: e, e, o, e, e
+Reverse of these is also e, e, o, e, e.
+
+Input: 
+S = "practice"
+Output: prectica
+Explanation: The vowels are a, i, e
+Reverse of these is e, i, a.
+
+Input: 
+S = "bcdfg"
+Output: bcdfg
+Explanation: There are no vowels in S.
+```
+```c++
+  string modify (string s)
+        {
+            //code here.
+            int i=0;
+            int j=s.size()-1;
+           string v="aeiou";
+           for(int i=0;i<s.size();i++){
+               if(v.find(s[i])!=string::npos){
+                while(j>=i){
+                 if(v.find(s[j])!=string::npos){
+                    swap(s[i],s[j]);
+                    j--;
+                    break;
+                 }
+                 j--;
+                }
+        
+               }
+           }
+           return s;
+    
+        }
+        \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\alternate sol
+        string modify (string s)
+        {
+            string vow = "";
+            for (int i = 0; i < s.length (); ++i)
+            {
+                // removing the vowels from s and adding them to the string vow
+                if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u')
+                {
+                    vow += s[i];
+                    s[i] = '.'; // to indicate that the current position is now empty
+                }
+            }
+        
+            // traversing s in reverse order and placing the vowels at empty locations
+            int i = s.length () - 1;
+            int j = 0;
+            while (i >= 0)
+            {
+                if (s[i] == '.') s[i] = vow[j++];
+                i--;
+            }
+            return s;
+        }
+        
+```
