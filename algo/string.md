@@ -355,3 +355,22 @@ Explanation: There are no vowels in S.
         }
         
 ```
+# hasing with array-oly for small alpha
+```c++
+
+#include <bits/stdc++.h>
+using namespace std;
+// Driver code
+
+int main()
+{
+  int a[26];
+  memset(a,0,sizeof(a));
+  string s="abcdddefghijklmnopqrstuvwxyz";
+  for(char i:s){
+    a[i-'a']++;
+  }
+  for(int i:a)cout<<i<<endl;
+   
+}
+```
